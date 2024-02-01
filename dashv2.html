@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard v1</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./login.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Remix Icon CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+
+  
+    <!-- <script src="./js/grapg.js"></script> -->
+
+
+</head>
+
+<body>
+    <main class="d-flex">
+        <div class="sidebar  d-flex flex-column flex-shrink-0 p-3 " style="width: 230px">
+
+            <!-- Arrow -->
+
+            <div class="sidebar-arrow">
+                <i class="ri-arrow-left-line"></i>
+            </div>
+
+
+            <!-- logo of the Sidebar -->
+            <a href="dash.html"
+                class=" logo-div d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <span class="fs-4 heading px-3">
+                    <img src="./logo.png" alt="" width="170">
+                </span>
+            </a>
+            <!-- Categories -->
+            <div class="category">
+                <div class="sub-heading">
+                    <h6>Manage</h6>
+                </div>
+                <ul class=" mt-0 nav nav-pills flex-column mb-auto">
+                    <li>
+                        <a href="#" class="nav-link link-dark">
+                            <i class="ri-dashboard-line px-0" style="font-size: 20px;"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link link-dark">
+                            <i class="ri-organization-chart " style="font-size: 20px;"></i>
+                            <span>Orginization</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link link-dark">
+                            <i class="ri-user-line " style="font-size: 20px;"></i>
+                            <span>Members</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link link-dark">
+                            <i class="ri-money-rupee-circle-line " style="font-size: 20px;"></i>
+                            <span>Payrolls</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="category">
+                <div class="sub-heading">
+                    <h6>Admin</h6>
+                </div>
+                <ul class=" mt-0 nav nav-pills flex-column mb-auto">
+                    <li>
+                        <a href="#" class="nav-link link-dark">
+                            <i class="ri-team-line"></i>
+                            <span>Teams</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link link-dark">
+                            <i class="ri-folders-line"></i>
+                            <span>Projects</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link link-dark">
+                            <i class="ri-file-chart-line"></i>
+                            <span>Reports</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link link-dark">
+                            <i class="ri-settings-2-line"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- Categories End -->
+
+
+            <hr>
+            <div class="dropdown position-absolute profile-container">
+                <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+                    id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://avatars.githubusercontent.com/u/67789838?v=4" alt="" width="32" height="32"
+                        class="rounded-circle me-2">
+                    <span>Profile</span>
+                </a>
+                <ul class="dropdown-menu profile-menu text-small shadow fade" aria-labelledby="dropdownUser2">
+                    <li><a class="dropdown-item" href="#">New project...</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="./login.html">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content container-fluid p-0">
+            <div class="alert-box  text-center">
+                Welcome to New <span style="padding-right: 5px;padding-left: 5px;">ERP</span> Portal
+            </div>
+            <div class="container-fluid">
+                <div class="d-flex page-header justify-content-between align-items-center">
+                    <h3 class="page-heading">
+                        Dashboard
+                    </h3>
+                    <p class="header-date m-0 " id="current-date"></p>
+                </div>
+
+
+                <div class="row justify-content-around px-2 ">
+                    <!-- Div Top Left -->
+                    <div class="data-container col-md-5 p-0 ">
+                        <div class="data-container-div ">
+                            <img src="./trophy.svg" class="img-fluid dc-i px-2" alt="">
+                            <h3 class="data-container-h">
+                                Top 5 Members Based On Time Logged
+                            </h3>
+                        </div>
+                        <div class="tm-data pb-4">
+                            <!-- <div class="tm-details d-flex align-items-center justify-content-between px-3">
+                                <div class="d-flex  align-items-center">
+                                    <div class="profile-dot"></div>
+                                    <span style="font-size: 15px; color: rgb(61, 77, 105); margin-left: 20px;">Milan Justel</span>
+                                </div> 
+                                
+                                <div class="d-flex align-items-center">
+                                    <span><i class="ri-time-line clock px-2" ></i></span>
+                                    <div class="clock-time"> 
+                                        54:14:10
+                                    </div>
+                                </div>
+                                
+                            </div> -->
+                            
+                            
+                            <!-- Make code Dynamic from Here -->
+
+                            <div class="tm-details d-flex align-items-center justify-content-between px-3">
+                                <div class="d-flex  align-items-center">
+                                    <div class="profile-dot"></div>
+                                    <span style="font-size: 15px; color: rgb(61, 77, 105); margin-left: 20px;">Justin Biber</span>
+                                </div>
+                                <div class="d-flex align-items-center text-left">
+                                    <div style="width: 40px;">
+                                        <span><i class="ri-time-line clock px-2" ></i></span>
+                                    </div>
+                                    
+                                    <div class="clock-time text-left px-2" style="width: 100px;">
+                                        814:14:10
+                                    </div>
+                                </div>
+
+                               
+                            </div>
+                            <div class="tm-details d-flex align-items-center justify-content-between px-3">
+                                <div class="d-flex  align-items-center">
+                                    <div class="profile-dot"></div>
+                                    <span style="font-size: 15px; color: rgb(61, 77, 105); margin-left: 20px;">Prem </span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div style="width: 40px;">
+                                        <span><i class="   ri-time-line clock px-2" ></i></span>
+                                    </div>
+                                    <div class="clock-time text-left px-2" style="width: 100px;">
+                                        45:14:10
+                                    </div>
+                                </div>
+
+                               
+                            </div>
+                            <div class="tm-details d-flex align-items-center justify-content-between px-3">
+                                <div class="d-flex  align-items-center">
+                                    <div class="profile-dot"></div>
+                                    <span style="font-size: 15px; color: rgb(61, 77, 105); margin-left: 20px;">Dilpreet</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div style="width: 40px;">
+                                        <span><i class="   ri-time-line clock px-2" ></i></span>
+                                    </div>
+                                    <div class="clock-time text-left px-2" style="width: 100px;">
+                                        45:14:10
+                                    </div>
+                                </div>
+
+                               
+                            </div>
+                            <div class="tm-details d-flex align-items-center justify-content-between px-3">
+                                <div class="d-flex  align-items-center">
+                                    <div class="profile-dot"></div>
+                                    <span style="font-size: 15px; color: rgb(61, 77, 105); margin-left: 20px;">Sidhu Moosewala</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div style="width: 40px;">
+                                        <span><i class="   ri-time-line clock px-2" ></i></span>
+                                    </div>
+                                    <div class="clock-time text-left px-2" style="width: 100px;">
+                                        45:14:10
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tm-details d-flex align-items-center justify-content-between px-3">
+                                <div class="d-flex  align-items-center">
+                                    <div class="profile-dot"></div>
+                                    <span style="font-size: 15px; color: rgb(61, 77, 105); margin-left: 20px;">Dheeraj Gill</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div style="width: 40px;">
+                                        <span><i class="   ri-time-line clock px-2" ></i></span>
+                                    </div>
+                                    <div class="clock-time text-left px-2" style="width: 100px;">
+                                        45:14:10
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                       <!-- End Your Dynamic Code Here -->
+
+                        </div>
+
+                    </div>
+
+                    <!-- Div Top Right -->
+                    <div class="data-container col-md-5 p-0 ">
+                        <div class="data-container-div ">
+                            <img src="./trophy.svg" class="img-fluid dc-i px-2" alt="">
+                            <h3 class="data-container-h">
+                                Top 5 Members Based On Activity
+                            </h3>
+                        </div>
+                        <div class="tm-data pb-4">
+                            <!-- Make code Dynamic from Here -->
+                            <div class="tm-details d-flex align-items-center ">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="tm-img px-2">
+                                            <a href="#"
+                                                class="d-flex align-items-center link-dark text-decoration-none " id="">
+                                                <img src="./img/6.jpg" alt="" width="32" height="32"
+                                                    class="rounded-circle me-2"> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="d-flex ">
+                                        <h6 class="tm-name">
+                                            Tmax Singh
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="d-flex ">
+                                        <h6 class="tm-time">
+                                            7hrs
+                                        </h6>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tm-details d-flex align-items-center ">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="tm-img px-2">
+                                            <a href="#"
+                                                class="d-flex align-items-center link-dark text-decoration-none " id="">
+                                                <img src="./img/4.jpg" alt="" width="32" height="32"
+                                                    class="rounded-circle me-2"> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="d-flex ">
+                                        <h6 class="tm-name">
+                                            Avni Kaur
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="d-flex ">
+                                        <h6 class="tm-time">
+                                            20hrs
+                                        </h6>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tm-details d-flex align-items-center ">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="tm-img px-2">
+                                            <a href="#"
+                                                class="d-flex align-items-center link-dark text-decoration-none " id="">
+                                                <img src="./img/3.webp" alt="" width="32" height="32"
+                                                    class="rounded-circle me-2"> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="d-flex ">
+                                        <h6 class="tm-name">
+                                            Prem Singh
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="d-flex ">
+                                        <h6 class="tm-time">
+                                            60hrs
+                                        </h6>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tm-details d-flex align-items-center ">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="tm-img px-2">
+                                            <a href="#"
+                                                class="d-flex align-items-center link-dark text-decoration-none " id="">
+                                                <img src="./img/2.jpg" alt="" width="32" height="32"
+                                                    class="rounded-circle me-2"> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="d-flex ">
+                                        <h6 class="tm-name">
+                                            Mandeep Verma
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="d-flex ">
+                                        <h6 class="tm-time">
+                                            47hrs
+                                        </h6>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tm-details d-flex align-items-center ">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="tm-img px-2">
+                                            <a href="#"
+                                                class="d-flex align-items-center link-dark text-decoration-none " id="">
+                                                <img src="./img/1.jpg" alt="" width="32" height="32"
+                                                    class="rounded-circle me-2"> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="d-flex ">
+                                        <h6 class="tm-name">
+                                            Sukhpreet Singh
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="d-flex ">
+                                        <h6 class="tm-time">
+                                            617hrs
+                                        </h6>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- End Your Dynamic Code Here -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- 2nd Row Start -->
+                <div class="row justify-content-around px-3 my-3">
+                    <div class="col-md-3 graph-container">
+                        <div class="graph-card">
+                            <div class="graph-upper-div">
+                                <div class="heading">
+                                    Total Hours
+                                </div>
+                                <div class="hours-heading chart1-time">
+                                    0h 00m
+                                </div>
+                            </div>
+                            <div class="graph ">
+                                <canvas id="myChart" class="pb-3" style="width:100%;max-width:500px; max-height: 130px ;height:130px"></canvas>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-3 graph-container">
+                        <div class="graph-card">
+                            <div class="graph-upper-div">
+                                <div class="heading">
+                                    Most Hour Logged Project
+                                </div>
+                                <div class="hours-heading chart2-time">
+                                    0h 00m
+                                </div>
+                            </div>
+
+                            <div class="graph row align-items-center " style="height: 60%;">
+                                <div class="col-md-7 d-flex " >
+                                    <div class="last-week-hour p-3 text-center" style="width: 100%;">
+                                        <div class="c2sub-heading text-left">
+                                            last week
+                                        </div>  
+                                        <div class="c2sub-time" id="last-week-time">
+                                            0h 00m
+                                        </div>  
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-4" style="height: 100%;">
+                                    <canvas id="myChart2" class="pb-0" style="width: 100%; height: 100%;"></canvas>
+                                </div>
+                            </div>
+                           
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-3 graph-container">
+                        <div class="graph-card">
+                            <div class="graph-upper-div">
+                                <div class="heading">
+                                    Most Project Activity
+                                </div>
+                                <div class="hours-heading chart3-time">
+                                    0h 00m
+                                </div>
+                            </div>
+
+                            <div class="graph row align-items-center " style="height: 60%;">
+                                <div class="col-md-7 d-flex " >
+                                    <div class="last-week-hour p-3 text-center" style="width: 100%;">
+                                        <div class="c2sub-heading text-left">
+                                            last week
+                                        </div>  
+                                        <div class="c2sub-time" id="mostp-activity">
+                                            0h 00m
+                                        </div>  
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-4" style="height: 100%;">
+                                    <canvas id="myChart3" class="pb-0" style="width: 100%; height: 100%;"></canvas>
+                                </div>
+                            </div>
+                           
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-2 graph-container">
+                        <div class="graph-card">
+                            <div class="graph-upper-div">
+                                <div class="heading">
+                                    Most Project Activity
+                                </div>
+                                <div class="hours-heading chart4-time">
+                                    0h 00m
+                                </div>
+                            </div>
+
+                            <div class="graph " >
+                                <!-- <div class="pt-2" style="height: 60%;">
+                                    <canvas id="myChart4" class="pb-0" style="width: 100%; height: 100%;"></canvas>
+                                </div> -->
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                  </div>
+                            </div>
+
+                     
+                        </div>
+                    </div>
+                </div>
+                <!-- 2nd Row End -->
+
+                <!-- 3rd Row Start -->
+                <div class="row justify-content-around">
+                    <div class="col-md-5 data-container"></div>
+                    <div class="col-md-5 data-container"></div>
+                </div>
+                <!-- 3rd Row End -->
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    
+    <!-- Graph Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <!-- Custom Js Files  -->
+    <script src="./js/custom_js.js"></script>
+    <script src="./js/grapg.js"></script>
+
+</body>
+
+</html>
