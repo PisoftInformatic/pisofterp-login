@@ -297,9 +297,20 @@ Side bar new code
     font-weight: 600;
 }
 
-.progress-bar{
-background-color: #8985FF !important;
+.progress{
+    height: 12px !important;
 }
+ .progress-bar{
+/* background-color: #8985FF ; */
+transition: all .7s ease-in-out !important;
+}
+
+.progress-persnt{
+    font-weight: 500;
+    color: rgb(61, 77, 105);
+    font-size: 15px;
+}
+
 
 
 
@@ -312,6 +323,7 @@ New
     height: 14px;
     border-radius: 50%;
     background: rgb(32, 190, 173);
+    /* background: rgb(183, 219, 158); */
 }
 
 /* Select every 3rd element and change its background color */

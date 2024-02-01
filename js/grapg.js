@@ -173,7 +173,7 @@
   
     //   ************     Chart 4 (total hours in week) js      ***********
     // const c4xValues = ["P1"];
-    const c4yValues = [65];  // Values are in the form of Minutes
+    const c4yValues = [85];  // Values are in the form of Minutes
     document.querySelector('.chart4-time').textContent = `${c4yValues[0]}%`;
 
     // // Update the hours-heading div
