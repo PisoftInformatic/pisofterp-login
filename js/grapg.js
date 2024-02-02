@@ -222,3 +222,99 @@
     // });
  
 
+
+
+
+//     // Row 5 Pie Chart (Donut Chart)
+//     const c5xValues = ["Mandeep", "Robert","Disuja"];
+// const c5yValues = [65, 209,112];  // Values are in the form of Minutes
+
+// // Calculate total hours
+// const c5totalHours = c5yValues.reduce((total, hours) => total + hours, 0);
+
+// // Convert total minutes back to the desired format
+// const c5totalHoursDisplay = `${Math.floor(c5totalHours / 60)}h ${(c2totalHours % 60).toString().padStart(2, '0')}m`;
+
+// // Update the hours-heading div
+// // document.querySelector('.chart2-time').textContent = c2totalHoursDisplay;
+
+// new Chart("myChart5", {
+//     type: "doughnut", // Change chart type to doughnut
+//     data: {
+//         labels: c5xValues,
+//         datasets: [{
+//             data: c5yValues,
+//             backgroundColor: ['#B6B4FA', '#8CA2F8','salmon'] // Set different colors for each segment
+//         }]
+//     },
+//     options: {
+//         cutoutPercentage: 50, // Adjust the size of the hole in the center (0 for a pie chart, 100 for a full circle)
+//         legend: {
+//             display: false
+//         },
+//         title: {
+//             display: false,
+//             text: `Graph 2`
+//         }
+//     }
+// });
+
+// // Update Last Week Time
+// document.querySelector('#last-week-time').textContent = '34h 20m';
+
+
+// Row 5 Pie Chart (Donut Chart)
+const c5xValues = ["Mandeep", "Robert", "Disuja", "Parmod"];
+const c5yValues = [65, 209, 112];  // Values are in the form of Minutes
+
+// Calculate total hours
+const c5totalHours = c5yValues.reduce((total, hours) => total + hours, 0);
+
+// Convert total minutes back to the desired format
+const c5totalHoursDisplay = `${Math.floor(c5totalHours / 60)}h ${(c5totalHours % 60).toString().padStart(2, '0')}m`;
+
+// Create the doughnut chart
+const myChart5 = new Chart("myChart5", {
+    type: "doughnut",
+    data: {
+        labels: c5xValues,
+        datasets: [{
+            data: c5yValues,
+            backgroundColor: ['#B6B4FA', '#8CA2F8', 'salmon'] // Set different colors for each segment
+        }]
+    },
+    options: {
+        cutoutPercentage: 50, // Adjust the size of the hole in the center (0 for a pie chart, 100 for a full circle)
+        legend: {
+            display: false
+        },
+        title: {
+            display: false,
+            text: `Graph 2`
+        }
+    }
+});
+
+// Update userdots and usernames based on the chart data
+const containers = document.querySelectorAll('.d-flex.align-items-center.my-2');
+
+containers.forEach((container, index) => {
+    const userdotElements = container.querySelectorAll('.profile-dot.ar-userdot');
+    const usernameElements = container.querySelectorAll('.ar-username');
+
+    // Loop through the data and update the elements
+    if (userdotElements.length > 0 && usernameElements.length > 0) {
+        // Update .ar-userdot bgcolor
+        for (let i = 0; i < userdotElements.length; i++) {
+            userdotElements[i].style.backgroundColor = myChart5.data.datasets[0].backgroundColor[index];
+        }
+
+        // Update .ar-username
+        for (let i = 0; i < usernameElements.length; i++) {
+            usernameElements[i].textContent = c5xValues[index];
+        }
+    }
+});
+
+// Update Last Week Time
+document.querySelector('#last-week-time').textContent = c5totalHoursDisplay;

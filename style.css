@@ -1,46 +1,78 @@
-
-      
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 
-*{
+* {
     box-sizing: border-box;
-padding: 0px;
-margin: 0px;    
-font-family:'Montserrat', sans-serif;
-/* transition: all ease-in-out .6s; */
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(61, 77, 105, 0.8);
+    font-weight: 500;
+    /* transition: all ease-in-out .6s; */
+}
+
+@media only screen and (max-width: 600px) {
+    .barstick-container {
+        width: 10px;
+        margin: 10px 5px;
+    }
+
+    .bs-dc {
+        width: 100% !important;
+    }
+    .row > div{
+        margin-top: 15px !important;
+    }
+    .timesheet-container{
+        grid-template-columns: 30.5% 30.5% 30.5% !important;
+    }
 }
 
 
-body{
-    font-size:  'Montserrat', 'sans-serif' !important;
+
+
+body {
+    font-size: 'Montserrat', 'sans-serif' !important;
     background-color: rgb(186, 195, 207);
 }
+.mybdr-secondary{
+    border: 1px solid rgb(194, 204, 225) !important;
+}
+.mybg-secondary{
+    background-color: #F7F8F9 !important;
+}
 
-.sidebar{
+.w-10 {
+    width: 10px;
+}
+
+.fs-14{
+    font-size: 14px;
+}
+.sidebar {
     height: 100vh;
-   
     font-weight: 400;
 }
 
 
 
-.nav-pills>ul>li>a{
+.nav-pills>ul>li>a {
     font-size: 13px;
     color: rgba(61, 77, 105, 0.8);
-    margin-left: 5px; 
-}
-.nav-pills>li>a>i{
-font-size: 20px ;
+    margin-left: 5px;
 }
 
-.sidebar{
+.nav-pills>li>a>i {
+    font-size: 20px;
+}
+
+.sidebar {
     border-right: 1px solid rgb(224, 224, 224);
     position: relative;
     background-color: #fff;
 }
 
-.sidebar-arrow{
+.sidebar-arrow {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -58,27 +90,28 @@ font-size: 20px ;
     cursor: pointer;
 }
 
-.heading{
+.heading {
     color: rgb(32, 190, 173)
 }
 
-.nav-pills>li{
+.nav-pills>li {
     display: flex;
     justify-content: start;
     align-items: center;
     padding-left: 20px;
 }
 
-.nav-pills>li>a{
+.nav-pills>li>a {
     font-size: 14px;
-    color:rgb(61, 77, 105) !important; 
+    color: rgb(61, 77, 105) !important;
+    padding: 6px 0px !important;
 }
 
-.nav-pills>li>a:hover{
-  color: gray;
+.nav-pills>li>a:hover {
+    color: gray;
 }
 
-.sub-heading>h6{
+.sub-heading>h6 {
     margin-top: 15px;
     margin-left: 20px;
     font-size: 13px;
@@ -87,19 +120,19 @@ font-size: 20px ;
 }
 
 
-.category{
+.category {
     margin-top: 10px;
 }
 
 
-.profile-container{
+.profile-container {
     bottom: 10px !important;
 }
 
 
 
 
-.alert-box{
+.alert-box {
     height: 50px !important;
     color: white;
     /* background-color: rgb(61, 77, 105); */
@@ -110,45 +143,45 @@ font-size: 20px ;
     padding: 8px 20px;
 }
 
-.alert-box>span:nth-child(1){
-    color: #ef7f1a;
-}
-.alert-box>span:nth-child(3){
+.alert-box>span:nth-child(1) {
     color: #ef7f1a;
 }
 
-.page-header{
+.alert-box>span:nth-child(3) {
+    color: #ef7f1a;
+}
+
+.page-header {
     padding: 15px;
 }
 
-.page-heading{
+.page-heading {
     font-size: 20px;
     color: rgb(31, 41, 57);
     font-weight: 500;
     /* line-height: 34px; */
     margin-bottom: 0px;
-   
+
 }
 
-.header-date{
+.header-date {
     font-size: 14px;
-    border: 1px solid #b46b2b ;
+    border: 1px solid #b46b2b;
     padding: 5px 10px 5px 10px;
     border-radius: 6px;
 }
 
-.data-container{
+.data-container {
     border: 1px solid rgb(194, 204, 225);
-    
     border-radius: 6px;
     margin-top: 20px;
-    height: 270px;
-    width: 47% !important;
-overflow: hidden;
-   
+    /* height: 270px; */
+    /* width: 47% !important; */
+    overflow: hidden;
+
 }
 
-.data-container-div{
+.data-container-div {
     /* background-color: #3d3b51; */
     display: flex;
     flex-direction: row;
@@ -161,32 +194,34 @@ overflow: hidden;
     /* margin: 0px; */
 }
 
-.data-container-h{
+.data-container-h {
     margin: 0px;
     color: rgb(32, 190, 173);
     font-size: 16px;
     font-weight: 600;
 }
-.dc-i{
-margin: 0px;
-/* height: 21px; */
-/* width: 21px; */
-padding-right: 15px;
+
+.dc-i {
+    margin: 0px;
+    /* height: 21px; */
+    /* width: 21px; */
+    padding-right: 15px;
 }
 
 
 
-.tm-details{
+.tm-details {
     height: 40px;
 }
 
-.tm-details>div>span, .clock-time{
-    font-weight: 500  !important;
+.tm-details>div>span,
+.clock-time {
+    font-weight: 500 !important;
     color: rgb(61, 77, 105);
 }
 
-.clock{
-    font-size: 25px ;
+.clock {
+    font-size: 25px;
     color: #20BEAD;
 }
 
@@ -210,7 +245,8 @@ Side bar new code
 .collapsed-sidebar .sub-heading>h6 {
     display: none !important;
 }
-.collapsed-sidebar > .logo-div{
+
+.collapsed-sidebar>.logo-div {
     visibility: hidden !important;
 }
 
@@ -240,9 +276,10 @@ Side bar new code
     justify-content: center;
     align-items: center;
 } */
-.collapsed-sidebar .profile-container>a>span{
+.collapsed-sidebar .profile-container>a>span {
     display: none;
 }
+
 
 
 
@@ -253,9 +290,9 @@ Side bar new code
 2nd Row (Graphs)
 
 */
-.graph-container{
+.graph-container {
     border: 2px solid gainsboro;
-    border-radius: 12px ;
+    border-radius: 12px;
     height: 200px;
     min-height: 200px;
     border: 1px solid rgb(194, 204, 225);
@@ -265,47 +302,52 @@ Side bar new code
     display: grid;
     align-content: space-between;
 }
-.graph-upper-div>.heading{
+
+.graph-upper-div>.heading {
     font-size: 14px;
     color: rgba(61, 77, 105, 0.7);
     font-weight: 500;
 
 }
 
-.hours-heading{
+.hours-heading {
     font-size: 20px;
     font-weight: 600;
+    color: black;
 }
 
 /* chart 2 */
-.last-week{
+.last-week {
     height: 100px;
     border: black 2px solid;
 }
-.last-week-hour{
+
+.last-week-hour {
     border: 2px #F3F5F9 solid;
     border-radius: 12px;
     background-color: #F3F5F9;
 }
 
-.c2sub-heading{
+.c2sub-heading {
     font-size: 12px;
     font-weight: 500;
     color: rgba(61, 77, 105, 0.7);
 }
-.c2sub-time{
+
+.c2sub-time {
     font-weight: 600;
 }
 
-.progress{
+.progress {
     height: 12px !important;
 }
- .progress-bar{
-/* background-color: #8985FF ; */
-transition: all .7s ease-in-out !important;
+
+.progress-bar {
+    /* background-color: #8985FF ; */
+    transition: all .7s ease-in-out !important;
 }
 
-.progress-persnt{
+.progress-persnt {
     font-weight: 500;
     color: rgb(61, 77, 105);
     font-size: 15px;
@@ -318,7 +360,7 @@ transition: all .7s ease-in-out !important;
 
 New 
 */
-.profile-dot{
+.profile-dot {
     width: 14px;
     height: 14px;
     border-radius: 50%;
@@ -328,18 +370,165 @@ New
 
 /* Select every 3rd element and change its background color */
 .tm-details:nth-child(3n+1) .profile-dot {
-    background-color: #73C0FF; /* Change to your desired color */
+    background-color: #73C0FF;
+    /* Change to your desired color */
 }
 
 /* Select every 3rd+1 element and change its background color */
 .tm-details:nth-child(3n+2) .profile-dot {
-    background-color: #61E5AC; /* Change to your desired color */
+    background-color: #61E5AC;
+    /* Change to your desired color */
 }
 
 /* Select every 3rd+2 element and change its background color */
 .tm-details:nth-child(3n+3) .profile-dot {
-    background-color: #F9828B; /* Change to your desired color */
+    background-color: #F9828B;
+    /* Change to your desired color */
 }
+
 .tm-details:nth-child(3n+4) .profile-dot {
-    background-color: #F9DD8F; /* Change to your desired color */
+    background-color: #F9DD8F;
+    /* Change to your desired color */
+}
+
+/* 
+3rd Row
+*/
+
+.sm-Bheading {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(31, 41, 57);
+}
+
+.activityr-subh {
+    font-size: 13px;
+    color: rgba(61, 77, 105, 0.7);
+    margin-left: 15px;
+    font-weight: 600;
+}
+
+.links>a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #20BEAD;
+    text-decoration: none;
+}
+
+.vertical-progress {
+    height: 10em;
+    position: relative;
+    background-color: #f8f9fa;
+    /* Background color of the progress bar container */
+    border-radius: 16px;
+}
+
+.vertical-progress .progress-bar {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.vertical-progress>.progress-bar {
+    width: 95%;
+    border-radius: 16px;
+}
+
+.vpb-text {
+    text-align: center;
+    border: 2px solid rgb(226, 223, 223);
+    padding: 7px;
+    margin-bottom: 10px;
+    margin-top: 7px !important;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 20px;
+}
+
+
+
+
+
+/* 
+chart
+*/
+
+.chartjs-render-monitor {
+    width: 100% !important;
+    /* height: 100% !important; */
+    /* max-width: 100% !important; */
+    max-height: 100% !important;
+}
+
+.bdr {
+    border: 2px solid salmon;
+}
+
+.r3-main-data {
+    width: 100%;
+    background-color: #F3F5F9;
+    margin: 20px 10px;
+}
+
+
+.box-container{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    row-gap: 20px;
+    margin-top: 20px;
+}
+
+.sub-box{
+    display: grid;
+    row-gap: 15px;
+    padding: 15px 13px;
+    background: rgb(231, 240, 254);
+    border-radius: 10px;
+}
+
+.subsubbox{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.sub-box>div{
+    color: black;
+}
+
+.timesheet-container{
+    display: grid;
+    grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
+    margin: 20px 0px 10px;
+    row-gap: 10px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.timecol-date{
+    color: rgba(61, 77, 105, 0.7);
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.timecol-time{
+    width: 100%;
+    min-height: 42px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border: 1px solid rgb(194, 204, 225);
+    margin-top: 10px;
+    background: rgb(255, 255, 255);
+    border-radius: 8px;
+    font-size: 13px;
+    color: rgb(61, 77, 105);
+    /* margin-left: 7px; */
 }
