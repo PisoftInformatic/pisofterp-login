@@ -3,10 +3,12 @@
        
         document.addEventListener("DOMContentLoaded", function () {
             var sidebar = document.querySelector('.sidebar');
+            var mainpage = document.querySelector('.main-content');
             var sidebarArrow = document.querySelector('.sidebar-arrow');
 
             sidebarArrow.addEventListener('click', function () {
                 sidebar.classList.toggle('collapsed-sidebar');
+                mainpage.classList.toggle('collasped-mainpage');
             });
         });
     

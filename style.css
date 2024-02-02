@@ -61,6 +61,8 @@ body {
 .sidebar {
     height: 100vh;
     font-weight: 400;
+    width: 230px;
+    z-index: 999;
 }
 
 
@@ -79,7 +81,58 @@ body {
     border-right: 1px solid rgb(224, 224, 224);
     position: relative;
     background-color: #fff;
+    position: fixed;
+    transition: all ease-in-out 1.2s;
 }
+
+/*
+
+Side bar new code
+*/
+
+.collasped-mainpage{
+    width: calc(100% - 80px) !important;
+    transition: all ease-in-out 1.2s;
+}
+.collapsed-sidebar {
+    transition: all 1.2s ease-in-out;
+    width: 80px !important;
+    padding: 0px !important;
+}
+
+/* Hide text and reduce padding when in collapsed state */
+.collapsed-sidebar .nav-pills>ul>li>a,
+.collapsed-sidebar .sub-heading>h6 {
+    display: none !important;
+}
+
+.collapsed-sidebar>.logo-div {
+    visibility: hidden !important;
+}
+
+/* .collapsed-sidebar .nav-pills>li>a: */
+.collapsed-sidebar .nav-pills>li>a i {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.collapsed-sidebar .nav-pills>li>a {
+    padding: 2px !important;
+    padding-top: 10px !important;
+}
+
+/* Hide only the text of the <a> tag */
+.collapsed-sidebar .nav-pills>li>a span {
+    display: none;
+}
+
+.collapsed-sidebar .profile-container>a>span {
+    display: none;
+}
+
+
+
 
 .sidebar-arrow {
     position: absolute;
@@ -162,6 +215,10 @@ body {
 
 .main-content{
     background-color: #F6F6F6;
+    width: calc(100% - 230px );
+    right: 0px;
+    position: absolute;
+    
 }
 
 .page-header {
@@ -240,59 +297,6 @@ body {
 }
 
 
-
-
-/*
-
-Side bar new code
-
-
-*/
-.collapsed-sidebar {
-    transition: all 1.2s ease-in-out;
-    width: 80px !important;
-    padding: 0px !important;
-}
-
-/* Hide text and reduce padding when in collapsed state */
-.collapsed-sidebar .nav-pills>ul>li>a,
-.collapsed-sidebar .sub-heading>h6 {
-    display: none !important;
-}
-
-.collapsed-sidebar>.logo-div {
-    visibility: hidden !important;
-}
-
-
-
-
-/* .collapsed-sidebar .nav-pills>li>a: */
-.collapsed-sidebar .nav-pills>li>a i {
-    display: block;
-    justify-content: center;
-    align-items: center;
-}
-
-.collapsed-sidebar .nav-pills>li>a {
-    padding: 2px !important;
-    padding-top: 10px !important;
-}
-
-/* Hide only the text of the <a> tag */
-.collapsed-sidebar .nav-pills>li>a span {
-    display: none;
-}
-
-/* Show the icon in the collapsed state */
-/* .collapsed-sidebar .nav-pills>li>a i {
-    display: block;
-    justify-content: center;
-    align-items: center;
-} */
-.collapsed-sidebar .profile-container>a>span {
-    display: none;
-}
 
 
 
