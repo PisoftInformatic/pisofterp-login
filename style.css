@@ -26,6 +26,14 @@
     .timesheet-container{
         grid-template-columns: 30.5% 30.5% 30.5% !important;
     }
+    .timesheet-col{
+        min-height: 340px !important;
+    }
+    .bar-container{
+        width: 90% !important;
+        /* margin: auto !important; */
+
+    }
 }
 
 
@@ -47,7 +55,8 @@ body {
 }
 
 .fs-14{
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 0.8rem;
 }
 .sidebar {
     height: 100vh;
@@ -151,6 +160,10 @@ body {
     color: #ef7f1a;
 }
 
+.main-content{
+    background-color: #F6F6F6;
+}
+
 .page-header {
     padding: 15px;
 }
@@ -172,9 +185,10 @@ body {
 }
 
 .data-container {
+    background-color: #fff;
     border: 1px solid rgb(194, 204, 225);
     border-radius: 6px;
-    margin-top: 20px;
+    margin-top: 10px;
     /* height: 270px; */
     /* width: 47% !important; */
     overflow: hidden;
@@ -353,6 +367,10 @@ Side bar new code
     font-size: 15px;
 }
 
+.progress-date{
+    margin-top: 22px;
+    font-size: 15px;
+}
 
 
 
@@ -495,6 +513,7 @@ chart
     -webkit-box-align: center;
     align-items: center;
     font-size: 12px;
+    flex-wrap: wrap;
 }
 
 .sub-box>div{
@@ -518,6 +537,7 @@ chart
 
 .timecol-time{
     width: 100%;
+    min-width: 80px;
     min-height: 42px;
     display: flex;
     -webkit-box-pack: center;
