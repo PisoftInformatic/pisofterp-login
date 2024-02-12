@@ -11,6 +11,10 @@
     /* transition: all ease-in-out .6s; */
 }
 
+.bg-green{
+    background-color: #20BEAD;
+    color: white;
+}
 
 @media only screen and (max-width: 600px) {
     .barstick-container {
@@ -136,7 +140,7 @@ Side bar new code
 
 /* Hide only the text of the <a> tag */
 .collapsed-sidebar .nav-pills>li>a span {
-    display: none;
+    display: none;  
 }
 
 .collapsed-sidebar .profile-container>a>span {
@@ -240,7 +244,7 @@ Side bar new code
 .page-heading {
     font-size: 20px;
     color: rgb(31, 41, 57);
-    font-weight: 500;
+    font-weight: 600;
     /* line-height: 34px; */
     margin-bottom: 0px;
 
@@ -572,6 +576,53 @@ chart
     /* margin-left: 7px; */
 }
 
+
+/*  */
+@media only screen and (max-width: 600px) {
+    .piechart-container{
+        width: 70% !important;
+    }
+    #myChart5{
+        width: 250px !important;
+        height: 250px !important;
+    }
+    .tm-details-pbar {
+        flex-wrap: wrap ;
+        margin-top: 20px !important;
+    }
+
+    .clock-tmd-text{
+        width: 150px !important;
+    }
+    .clk-td-cont{
+        /* border: 2px solid red; */
+        /* flex-wrap: wrap; */
+        margin-top: 10px;
+    }
+    .clk-td-text{
+        width: 380px;
+        min-width: 140px;
+        /* border: 2px solid slateblue; */
+    }
+    .clk-td-clk{
+        width: 115px;
+    }
+        
+
+}
+
+/* .piechart-container{
+    width: 30%;
+} */
+
+#myChart5{
+    width: 100%;
+}
+
+
+
+
+
 /* Members Page  */
 .members-table{
     overflow-x: scroll;
@@ -621,56 +672,110 @@ th{
     background-color: #eeaf7841 !important;
 }
 
-
-table{
-    border-radius: 32px !important ;
+.mybdr-radius{
+    border-radius: 6px;
+}
+.assigned-pro{
+display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 6px;
+    border: 1px solid rgb(228, 231, 235);
+    border-radius: 6px;
+    color: rgb(61, 77, 105);
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    width: 130px;
 }
 
-table{
-    background-color: #20BEAD !important;
+.member-name{
+    margin: auto 0px;
+    color: rgb(61, 77, 105);
+    font-size: 13.5px;
+    font-weight: 500;
 }
 
+.mmbr-payment{
+    margin: auto 0px;
+    color: rgb(61, 77, 105);
+    font-size: 13.5px;
+    font-weight: 500;
+}
+.mmbr-timesheet{
+    margin: auto 0px;
+    color: rgba(61, 77, 105, 0.7);
+    font-size: 13px;
+    font-weight: 500;
+}
 
+.weekly-time-limit{
+    margin: auto 0px !important;
+color: rgb(61, 77, 105) !important;
+font-size: 13.5px !important;
+font-weight: 500 !important;
+}
 
+.mini-head{
+    margin: auto 0px;
+    color: rgba(61, 77, 105, 0.7);
+    font-size: 12px;
+    font-weight: 600;
+}
 
-/*  */
-@media only screen and (max-width: 600px) {
-    .piechart-container{
-        width: 70% !important;
-    }
-    #myChart5{
-        width: 250px !important;
-        height: 250px !important;
-    }
-    .tm-details-pbar {
-        flex-wrap: wrap ;
-        margin-top: 20px !important;
-    }
+.switch-btn{
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 32px;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 0px 12px;
+    /* border-radius: 6px; */
+    /* color: rgb(255, 255, 255); */
+    /* background-color: rgb(32, 190, 173); */
+    /* cursor: pointer; */
+}
 
-    .clock-tmd-text{
-        width: 150px !important;
-    }
-    .clk-td-cont{
-        /* border: 2px solid red; */
-        /* flex-wrap: wrap; */
-        margin-top: 10px;
-    }
-    .clk-td-text{
-        width: 380px;
-        min-width: 140px;
-        /* border: 2px solid slateblue; */
-    }
-    .clk-td-clk{
-        width: 115px;
-    }
-        
+.switch-btn:hover{
+    border: 1px solid rgb(32, 190, 173) !important;
+    border-radius: 7px;
+}
+
+.search{
+    font-size: 13px ;
+    padding: 5px;
+    border-radius: 7px;
+}
+.search:hover{
+    border: 1px solid rgb(32, 190, 173) !important;
+    border-radius: 7px;
 
 }
 
-/* .piechart-container{
-    width: 30%;
-} */
+.invite-mmbr-btn, .invite-mmbr-btn>span>i{
+    /* min-height: 40px !important; */
+    /* background-color: rgb(32, 190, 173); */
+    color: rgb(255, 255, 255) !important;
+    font-size: 13.3px !important;
+    font-weight: 600 !important;
+    border: none  !important;
+    text-decoration: none;
+    border-radius: 7px ;
+}
+.invite-mmbr-btn:hover{
+    background-color: rgb(43, 163, 149);
 
-#myChart5{
-    width: 100%;
+}
+
+td{
+    padding: 15px !important;
+}
+th{
+    padding: 15px !important;
+    
 }

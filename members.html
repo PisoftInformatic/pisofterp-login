@@ -132,55 +132,96 @@
             <div class="alert-box   text-center">
                 Welcome to New <span style="padding-right: 5px;padding-left: 5px;">ERP</span> Portal
             </div>
-
             <!-- Main Page Data  -->
-           <div class="container-fluid">
-            <div class="d-flex page-header justify-content-between align-items-center">
+            <div class="container-fluid">
+              <div class="d-flex page-header justify-content-between align-items-center">
                 <h3 class="page-heading">
-                    Dashboard
+                  Members
                 </h3>
                 <p class="header-date m-0 " id="current-date"></p>
+              </div>
+              <div class="row justify-content-between">
+                <div class="control-tab col-md-6">
+                  <div class="row">
+                    <div class="switch-tab-cont col-md-4  mx-2 mb-0">
+                      <div class="d-flex  flex-column">
+                        <div class="mini-head">
+                          Type
+                        </div>
+                        <div class="switch-button mybdr-secondary p-1 mt-1 justify-content-center  bg-white  d-flex" style="border-radius: 7px;">
+                          <button type="button" class="switch-btn bg-green px-2 py-1 mybdr-secondary" style="border-radius: 7px ;">Active</button>
+                          <button type="button" class="switch-btn  bg-white   px-2 py-1 mx-1" style=" border: none;">Invited</button>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="search-box col-md-7 col-sm-2 px-0 mx-2">
+                      <div class="d-flex  flex-column mx-2">
+                        <div class="mini-head pt-0    ">
+                          Search Member
+                        </div>
+                        <div class="switch-button mt-1  d-flex" >
+                          <input type="text" class="search mybdr-secondary py-2 px-2" placeholder="Search Member using their Name">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="invite-btn col-md-3 d-flex justify-content-center align-items-center ">
+                  <a href="#invite-member" class="bg-green py-2 mb-0  px-3 invite-mmbr-btn"><span><i class="ri-add-line"></i></span> Invite Member</a>
+              </div>
             </div>
-            <div class="members-table  px-2">
-                <table class="table align-middle mb-0   ">
-                    <thead class="bg-light ">
-                      <tr>
-                        <th>Members Name</th>
-                        <th>Assigned Projects</th>
-                        <th>Payment</th>
-                        <th>Weekly Limit</th>
-                        <th>Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <div class="d-flex align-items-center">
-                            <img
-                                src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-                                alt=""
-                                style="width: 45px; height: 45px"
-                                class="rounded-circle"
-                                />
-                            <div class="ms-3">
-                              <p class=" mb-1">John Doe</p>
-                              <!-- <p class="text-muted mb-0">john.doe@gmail.com</p> -->
-                            </div>
+            
+            <!-- table Section -->
+            <div class="members-table mt-4 px-2">
+              <table class="table align-middle mb-5   ">
+                <thead class="bg-light ">
+                  <tr>
+                    <th>Members Name</th>
+                    <th>Assigned Projects</th>
+                    <th>Payment</th>
+                    <th style="text-wrap: nowrap;">Weekly Limit</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <img
+                        src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                        alt=""
+                        style="width: 40px; height: 40px"
+                        class="rounded-circle"
+                        />
+                        <div class="ms-3 member-name">
+                          Sumit Pareek
+                          <!-- <p class="text-muted mb-0">john.doe@gmail.com</p> -->
+                        </div>
                           </div>
                         </td>
                         <td>
-                          <p class="mybdr-secondary p-2 mb-1">Falcon Heavy</p>
+                          <div class="assigned-pro py-0" style="min-width: 150px; width: 170px;">
+                                Falcon Heavy
+                          </div>
                           <!-- <p class="text-muted mb-0">IT department</p> -->
                         </td>
+                       
                         <td>
-                          <span class="badge badge-success rounded-pill d-inline">Active</span>
+                          <!-- <span class="badge badge-success rounded-pill text-primary d-inline">Active</span> -->
+                          <div class="d-flex flex-column">
+                            <div class="mmbr-payment">$123/hour</div>
+                            <div class="mmbr-timesheet mt-1">
+                              Timesheet Approval 
+                            </div>
+                          </div>
                         </td>
-                        <td>No Limit Set</td>
+                        <td class="weekly-time-limit">100 Hours</td>
                         <td>
-                            <div class="dropdown">
-                                <a class="btn mybdr-secondary  " href="#" role="button" id="members-actions" data-bs-toggle="dropdown" aria-expanded="false">
-                                  <span class="pr-3 text-left"> Actions</span>
-                                    <span class="px-3 text-right" style="font-size: 14px;"> <i class="ri-arrow-down-s-line"></i></span>
+                          <div class="dropdown">
+                            <a class="btn mybdr-secondary  " href="#" role="button" id="members-actions" data-bs-toggle="dropdown" aria-expanded="false">
+                              <span class="pr-3 text-left"> Actions</span>
+                              <span class="px-3 text-right" style="font-size: 14px;"> <i class="ri-arrow-down-s-line"></i></span>
                                 </a>
                               
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -197,32 +238,40 @@
                                 src="https://mdbootstrap.com/img/new/avatars/6.jpg"
                                 class="rounded-circle"
                                 alt=""
-                                style="width: 45px; height: 45px"
+                                style="width: 40px; height: 40px"
                                 />
-                            <div class="ms-3">
-                              <p class=" mb-1">Alex Ray</p>
+                            <div class="ms-3  member-name">
+                              Angel Priya
                               <!-- <p class="text-muted mb-0">alex.ray@gmail.com</p> -->
                             </div>
                           </div>
                         </td>
                         <td>
-                          <p class="fw-normal mb-1">Consultant</p>
-                          <p class="text-muted mb-0">Finance</p>
+                          <div class="assigned-pro py-0" style="min-width: 150px; width: 170px;">
+                            Consultant
+                          </div>
                         </td>
                         <td>
-                          <span class="badge badge-primary rounded-pill d-inline"
-                                >Onboarding</span
-                            >
+                          <div class="d-flex flex-column">
+                            <div class="mmbr-payment">$50/hour</div>
+                            <div class="mmbr-timesheet mt-1">
+                              Timesheet Approval 
+                            </div>
+                          </div>
                         </td>
-                        <td>Junior</td>
+                        <td class="weekly-time-limit">152 Hours</td>
                         <td>
-                          <button
-                                  type="button"
-                                  class="btn btn-link btn-rounded btn-sm "
-                                  data-mdb-ripple-color="dark"
-                                  >
-                            Edit
-                          </button>
+                          <div class="dropdown">
+                            <a class="btn mybdr-secondary  " href="#" role="button" id="members-actions" data-bs-toggle="dropdown" aria-expanded="false">
+                              <span class="pr-3 text-left"> Actions</span>
+                                <span class="px-3 text-right" style="font-size: 14px;"> <i class="ri-arrow-down-s-line"></i></span>
+                            </a>
+                          
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                              <li><a class="dropdown-item" href="#">Edit Members</a></li>
+                              <li><a class="dropdown-item" href="#">Remove Members</a></li>
+                            </ul>
+                          </div>
                         </td>
                       </tr>
                       <tr>
@@ -232,30 +281,40 @@
                                 src="https://mdbootstrap.com/img/new/avatars/7.jpg"
                                 class="rounded-circle"
                                 alt=""
-                                style="width: 45px; height: 45px"
+                                style="width: 40px; height: 40px"
                                 />
-                            <div class="ms-3">
-                              <p class=" mb-1">Kate Hunington</p>
+                            <div class="ms-3  member-name">
+                              Meenakshi Thakur
                               <!-- <p class="text-muted mb-0">kate.hunington@gmail.com</p> -->
                             </div>
                           </div>
                         </td>
                         <td>
-                          <p class="fw-normal mb-1">Designer</p>
-                          <p class="text-muted mb-0">UI/UX</p>
+                          <div class="assigned-pro py-0" style="min-width: 150px; width: 170px;">
+                            Consultant
+                          </div>
                         </td>
                         <td>
-                          <span class="badge badge-warning rounded-pill d-inline">Awaiting</span>
+                          <div class="d-flex flex-column">
+                            <div class="mmbr-payment">$30/hour</div>
+                            <div class="mmbr-timesheet mt-1">
+                              Timesheet Approval 
+                            </div>
+                          </div>
                         </td>
-                        <td>Senior</td>
+                        <td class="weekly-time-limit">400 Hours</td>
                         <td>
-                          <button
-                                  type="button"
-                                  class="btn btn-link btn-rounded btn-sm "
-                                  data-mdb-ripple-color="dark"
-                                  >
-                            Edit
-                          </button>
+                          <div class="dropdown">
+                            <a class="btn mybdr-secondary  " href="#" role="button" id="members-actions" data-bs-toggle="dropdown" aria-expanded="false">
+                              <span class="pr-3 text-left"> Actions</span>
+                              <span class="px-3 text-right" style="font-size: 14px;"> <i class="ri-arrow-down-s-line"></i></span>
+                            </a>
+                            
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                              <li><a class="dropdown-item" href="#">Edit Members</a></li>
+                              <li><a class="dropdown-item" href="#">Remove Members</a></li>
+                            </ul>
+                          </div>
                         </td>
                       </tr>
                     </tbody>
@@ -264,23 +323,23 @@
            </div>
 
         </div>
-
-    </main>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
-
-    <!-- Graph Js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        
+      </main>
+      
+      
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"></script>
+      
+      <!-- Graph Js -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <!-- Custom Js Files  -->
     <script src="./js/custom_js.js"></script>
   
-
+    
 </body>
 
 </html>
