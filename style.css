@@ -35,9 +35,20 @@
         /* margin: auto !important; */
 
     }
+    .graph-container{
+        height: 250px !important;
+    }
+    /* .piechart{
+        width: 350px !important;
+        height: 170px !important;
+    } */
+
 }
 
-
+/* .piechart{
+    width: 400px;
+    height: 400px;
+} */
 
 
 body {
@@ -477,10 +488,13 @@ chart
 */
 
 .chartjs-render-monitor {
-    width: 100% !important;
+    /* width: 100% !important; */
     /* height: 100% !important; */
     /* max-width: 100% !important; */
-    max-height: 100% !important;
+    /* max-height: 100% !important; */
+    height: 140px !important;
+    max-height: 174px !important;
+    /* width: 89%; */
 }
 
 .bdr {
@@ -556,4 +570,107 @@ chart
     font-size: 13px;
     color: rgb(61, 77, 105);
     /* margin-left: 7px; */
+}
+
+/* Members Page  */
+.members-table{
+    overflow-x: scroll;
+}
+th{
+    margin: auto 0px;
+    color: rgba(61, 77, 105, 0.7) !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    padding: 12px !important;
+}
+
+#members-actions{
+    grid-area: 1 / 1 / 2 / 3 ;
+    color: rgba(61, 77, 105, 0.7) ;
+    margin-left: 2px ;
+    margin-right: 2px ;
+    box-sizing: border-box ;
+    font-size: 13px ;
+    font-weight: 500;
+    transition: .3s ease-in-out all;
+}
+#members-actions:hover{
+    box-shadow: rgba(85, 85, 85, 0.178) 1px 1px 13px;
+    border: #f7892a8f 1px solid !important;
+    
+    
+}
+#members-action:focus,#members-action:focus{
+    border: #f7892a8f 1px solid ;
+}
+
+.dropdown>.dropdown-menu{
+    border: #f7892a8f 1px solid;
+    /* box-shadow: #61e5aca4  1px 1px 2px; */
+    margin-top: 5px !important;
+   
+}
+.dropdown>.dropdown-menu>li>.dropdown-item{
+    font-size: 13px ;
+    color: rgba(61, 77, 105, 0.7) ;
+    margin-left: 2px ;
+    margin-right: 2px ;
+    font-weight: 500;
+}
+.dropdown>.dropdown-menu>li>.dropdown-item:hover{
+    background-color: #eeaf7841 !important;
+}
+
+
+table{
+    border-radius: 32px !important ;
+}
+
+table{
+    background-color: #20BEAD !important;
+}
+
+
+
+
+/*  */
+@media only screen and (max-width: 600px) {
+    .piechart-container{
+        width: 70% !important;
+    }
+    #myChart5{
+        width: 250px !important;
+        height: 250px !important;
+    }
+    .tm-details-pbar {
+        flex-wrap: wrap ;
+        margin-top: 20px !important;
+    }
+
+    .clock-tmd-text{
+        width: 150px !important;
+    }
+    .clk-td-cont{
+        /* border: 2px solid red; */
+        /* flex-wrap: wrap; */
+        margin-top: 10px;
+    }
+    .clk-td-text{
+        width: 380px;
+        min-width: 140px;
+        /* border: 2px solid slateblue; */
+    }
+    .clk-td-clk{
+        width: 115px;
+    }
+        
+
+}
+
+/* .piechart-container{
+    width: 30%;
+} */
+
+#myChart5{
+    width: 100%;
 }

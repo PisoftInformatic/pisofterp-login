@@ -1,18 +1,46 @@
 
-// Collaspe SideBar
+// // Collaspe SideBar
        
-        document.addEventListener("DOMContentLoaded", function () {
-            var sidebar = document.querySelector('.sidebar');
-            var mainpage = document.querySelector('.main-content');
-            var sidebarArrow = document.querySelector('.sidebar-arrow');
+//         document.addEventListener("DOMContentLoaded", function () {
+//             var sidebar = document.querySelector('.sidebar');
+//             var mainpage = document.querySelector('.main-content');
+//             var sidebarArrow = document.querySelector('.sidebar-arrow');
 
-            sidebarArrow.addEventListener('click', function () {
-                sidebar.classList.toggle('collapsed-sidebar');
-                mainpage.classList.toggle('collasped-mainpage');
-            });
-        });
+//             sidebarArrow.addEventListener('click', function () {
+//                 sidebar.classList.toggle('collapsed-sidebar');
+//                 mainpage.classList.toggle('collasped-mainpage');
+//             });
+//         });
     
-        
+    
+document.addEventListener("DOMContentLoaded", function () {
+  var sidebar = document.querySelector('.sidebar');
+  var mainpage = document.querySelector('.main-content');
+  var sidebarArrow = document.querySelector('.sidebar-arrow');
+
+  // Function to check screen size and collapse sidebar if below 600 pixels
+  function checkScreenSize() {
+      if (window.innerWidth < 600) {
+          sidebar.classList.add('collapsed-sidebar');
+          mainpage.classList.add('collasped-mainpage');
+      }
+  }
+
+  // Initial check when DOM is loaded
+  checkScreenSize();
+
+  // Toggle sidebar collapse on arrow click
+  sidebarArrow.addEventListener('click', function () {
+      sidebar.classList.toggle('collapsed-sidebar');
+      mainpage.classList.toggle('collasped-mainpage');
+  });
+
+  // Listen for window resize events and update sidebar accordingly
+  window.addEventListener('resize', function () {
+      checkScreenSize();
+  });
+});
+
 
 //
 // current date 

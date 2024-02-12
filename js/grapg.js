@@ -296,7 +296,8 @@ const myChart5 = new Chart("myChart5", {
 });
 
 // Update userdots and usernames based on the chart data
-const containers = document.querySelectorAll('.d-flex.align-items-center.my-2');
+// const containers = document.querySelectorAll('.d-flex.align-items-center.my-2');
+const containers = document.querySelectorAll('.profile-data');
 
 containers.forEach((container, index) => {
     const userdotElements = container.querySelectorAll('.profile-dot.ar-userdot');
