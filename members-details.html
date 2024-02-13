@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="./login.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Remix Icon CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- <script src="./js/grapg.js"></script> -->
+</head>
+
+<body>
+    <main class="d-flex">
+        <div class="sidebar  d-flex flex-column flex-shrink-0 p-3 ">
+
+            <!-- Arrow -->
+            <div class="sidebar-arrow">
+                <i class="ri-arrow-left-line"></i>
+            </div>
+
+            <!-- logo of the Sidebar -->
+            <a href="dashv2.html"
+                class=" logo-div d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <span class="fs-4 heading px-3">
+                    <img src="./logo.png" alt="" width="170">
+                </span>
+            </a>
+
+            <!-- Categories -->
+            <div class="category">
+                <div class="sub-heading">
+                    <h6 class="mb-0">Manage</h6>
+                </div>
+                <ul class=" mt-0 nav nav-pills flex-column mb-auto">
+                    <li>
+                        <a href="./dashv2.html" class="nav-link link-dark">
+                            <i class="ri-dashboard-line px-0" style="font-size: 20px;"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link link-dark">
+                            <i class="ri-organization-chart " style="font-size: 20px;"></i>
+                            <span>Orginization</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./members.html" class="nav-link link-dark">
+                            <i class="ri-user-line " style="font-size: 20px;"></i>
+                            <span>Members</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link link-dark">
+                            <i class="ri-money-rupee-circle-line " style="font-size: 20px;"></i>
+                            <span>Payrolls</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <div class="sub-heading">
+                    <h6 class="mb-0">Admin</h6>
+                </div>
+                <ul class=" mt-0 nav nav-pills flex-column mb-auto">
+                    <li>
+                        <a href="#" class="nav-link link-dark">
+                            <i class="ri-team-line"></i>
+                            <span>Teams</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link link-dark">
+                            <i class="ri-folders-line"></i>
+                            <span>Projects</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link link-dark">
+                            <i class="ri-file-chart-line"></i>
+                            <span>Reports</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link link-dark">
+                            <i class="ri-settings-2-line"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- Categories End -->
+
+
+            <hr>
+            <div class="dropdown position-absolute profile-container">
+                <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+                    id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://avatars.githubusercontent.com/u/67789838?v=4" alt="" width="32" height="32"
+                        class="rounded-circle me-2">
+                    <span>Profile</span>
+                </a>
+                <ul class="dropdown-menu profile-menu text-small shadow fade" aria-labelledby="dropdownUser2">
+                    <li><a class="dropdown-item" href="#">New project...</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="./login.html">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content  p-0 ">
+            <div class="alert-box  text-center">
+                Welcome to New <span style="padding-right: 5px;padding-left: 5px;">ERP</span> Portal
+            </div>
+
+            <!-- Main Page Data  -->
+            <div class="container-fluid " style="height: 90vh;">
+                <div class="d-flex flex-wrap page-header justify-content-between align-items-center">
+                    <h3 class="page-heading">
+                        Members
+                    </h3>
+                    <p class="header-date m-0 " id="current-date"></p>
+                </div>
+
+                <div class="d-flex mb-3">
+                    <a href="#" class="back-arrow pback" onclick="goBack()">
+                        <i class="ri-arrow-left-line"></i> <span class=" px-3">Back to All Members</span>
+                    </a>
+                </div>
+
+                <!-- Main Data Container -->
+                <div class="data-container p-3">
+                    <div class="d-flex">
+                        <div class="head">
+                            Member Invitation
+                        </div>
+                    </div>
+
+                    <!-- <div class="d-flex">
+                        <div class="user-profile d-flex align-items-center">
+                            <div class="profile-avatar">
+                                <img src="https://avatars.githubusercontent.com/u/1148717?v=4" class="img-fluid img-rounded" alt="" srcset="" width="60" height="60" style="border-radius: 50%; max-width: 100%;" >
+                            </div>
+                            <div class="profile-id px-4">
+                                <div class="profile-name">
+                                    jef bezoz
+                                </div>
+                                <div class="profile-email fs-13">
+                                    jeffbezoz@gmail.com
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- Main Content Start -->
+                    <div class="row ">
+                        <div class="col-md-7 ">
+
+                            <!-- User Profile Head -->
+                            <div class="user-profile d-flex align-items-center justify-content-between ">
+                                <div class="d-flex up-cont1 align-items-center">
+                                    <div class="profile-avatar">
+                                        <img src="https://avatars.githubusercontent.com/u/1148717?v=4"
+                                            class="img-fluid img-rounded" alt="" srcset="" width="60" height="60"
+                                            style="border-radius: 50%; max-width: 100%;">
+                                    </div>
+                                    <div class="profile-id px-4">
+                                        <div class="profile-name">
+                                            jef bezoz
+                                        </div>
+                                        <div class="profile-email fs-13">
+                                            jeffbezoz@gmail.com
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="d-flex up-cont2 align-items-center">
+                                    <div class="profile-id px-4">
+                                        <div class="mini-head fs-14">
+                                            role
+                                        </div>
+                                        <div class="profile-email mt-2 fs-13">
+                                            Owner
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Timezone Div -->
+                            <div class="d-flex p-2 my-3">
+                                <div class="fs-14 text-black">
+                                    <span class="mini-head fs-13">Timezone: </span>UTC (-0500) US/Pacific
+                                </div>
+                            </div>
+
+                            <!-- Sub Container -->
+                            <div class="data-container mybg-secondary p-3 ">
+                                <div class="head-cont d-flex">
+                                    <div class="heading"
+                                        style="font-weight: 600; font-size: 14px; white-space: no-wrap;">
+                                        This Week
+                                    </div>
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-md-10 align-items-center ">
+                                        <div class="sub-body row justify-content-between ">
+                                            <div class="col-md-4 py-3">
+                                                <div class="d-flex flex-column">
+                                                    <div class="hour my-0" style="font-weight: 600;">
+                                                        25 h 30 m
+                                                    </div>
+                                                    <div class="fs-13 my-1">
+                                                        Time Worked
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 sub2-body py-3 ">
+                                                <div class="hour " style="font-weight: 600;">
+                                                    <span><i class="fa fa-dollar"></i> </span> 453
+                                                </div>
+                                                <div class="fs-13 my-1">
+                                                    Earned
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 py-3 ">
+                                                <div class="sub2-body d-flex gap-4 align-items-start ">
+                                                    <div class="d-flex flex-column" style="width: 120px;">
+                                                        <div class="hour my-1" >
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                    style="width: 45%;" aria-valuenow="45"
+                                                                    aria-valuemin="0" aria-valuemax="100">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="fs-13 my-1 text-center">
+                                                            Activity
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="" style="font-weight: 600;">
+                                                        45%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <!-- Custom Js Files  -->
+    <script src="./js/custom_js.js"></script>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            updateProgressBarColors();
+            // const progressValues = 75;
+            function updateProgressBarColors() {
+                const progressBars = document.querySelectorAll('.progress-bar');
+
+                progressBars.forEach(progressBar => {
+                    const progressValue = parseInt(progressBar.getAttribute('aria-valuenow'));
+
+                    if (progressValue < 20) {
+                        progressBar.style.backgroundColor = '#FB4B4B';
+                    } else if (progressValue < 50) {
+                        progressBar.style.backgroundColor = '#FFC163';
+                    } else if (progressValue < 70) {
+                        progressBar.style.backgroundColor = 'rgb(183, 219, 158)';
+                    } else {
+                        progressBar.style.backgroundColor = '#20BEAD';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 
 * {
@@ -64,15 +64,29 @@ body {
 }
 .mybg-secondary{
     background-color: #F7F8F9 !important;
+    /* background-color: rgb(252, 253, 254) */
 }
 
 .w-10 {
     width: 10px;
 }
-
+.fs-12{
+    font-size: 12px;
+}
+.fs-13{
+    font-size: 13px;
+}
 .fs-14{
     /* font-size: 14px; */
-    font-size: 0.8rem;
+    font-size: 0.8rem !important;
+}
+
+.fs-16{
+    font-size: 16px !important;
+}
+.fs-18{
+    /* font-size: 14px; */
+    font-size:18px !important;
 }
 .sidebar {
     height: 100vh;
@@ -778,4 +792,87 @@ td{
 th{
     padding: 15px !important;
     
+}
+
+.model-text{
+    margin: auto 0px !important;
+    color: rgb(61, 77, 105) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+
+.model-btn{
+    font-size: 14px !important;
+    font-weight: 400 !important ;
+}
+
+
+/* Invite Member  */
+.back-arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.back-arrow>i{
+    background-color: white;
+    padding: 5px 10px !important;
+    font-size: 20px  !important;
+    font-weight: 500 !important;
+    border-radius: 7px !important;
+    /* border: 2px solid red; */
+}
+.back-arrow>span{
+    font-size: 14px ;
+    font-weight: 500;
+    color: black;
+}
+
+.head{
+    font-size: 16px;
+    color: rgb(31, 41, 57);
+    font-weight: 600;
+    /* line-height: 34px; */
+    margin-bottom: 0px;
+}
+
+.input-field{
+    border-radius: 7px;
+    padding: 10px 10px;
+    font-size: 12px;
+    width: 260px;
+    border: #C2CCE1 1px solid;
+}
+
+.input-field:hover, .input-field:active, .input-field:focus{
+    border:#20BEAD 1px solid !important;
+}
+.bdr-rds{
+    border-radius: 7px;
+}
+.button-cont> .cncl-btn:hover{
+    background-color: #61E5AC   ;
+}
+button{
+    cursor: pointer;
+}
+.disabled{
+    cursor: not-allowed !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .input-field{
+        width: 190px !important;
+    }
+    .sub-body{
+        flex-wrap: wrap;
+        /* justify-content: center; */
+    }
+}
+
+
+/* user Details */
+.user-profile{
+   margin-top: 10px;
+   margin-left: 5px;
 }
