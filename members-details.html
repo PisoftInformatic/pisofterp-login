@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <!-- <link rel="stylesheet" href="./login.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -31,7 +31,7 @@
             <a href="dashv2.html"
                 class=" logo-div d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                 <span class="fs-4 heading px-3">
-                    <img src="./logo.png" alt="" width="170">
+                    <img src="./img/logo.png" alt="" width="170">
                 </span>
             </a>
 
@@ -134,7 +134,7 @@
             </div>
 
             <!-- Main Page Data  -->
-            <div class="container-fluid " style="height: 90vh;">
+            <div class="container-fluid " style="height: 100%; padding-bottom: 20%;" >
                 <div class="d-flex flex-wrap page-header justify-content-between align-items-center">
                     <h3 class="page-heading">
                         Members
@@ -149,28 +149,14 @@
                 </div>
 
                 <!-- Main Data Container -->
-                <div class="data-container p-3">
+                <div class="data-container  p-3">
                     <div class="d-flex">
                         <div class="head">
                             Member Invitation
                         </div>
                     </div>
 
-                    <!-- <div class="d-flex">
-                        <div class="user-profile d-flex align-items-center">
-                            <div class="profile-avatar">
-                                <img src="https://avatars.githubusercontent.com/u/1148717?v=4" class="img-fluid img-rounded" alt="" srcset="" width="60" height="60" style="border-radius: 50%; max-width: 100%;" >
-                            </div>
-                            <div class="profile-id px-4">
-                                <div class="profile-name">
-                                    jef bezoz
-                                </div>
-                                <div class="profile-email fs-13">
-                                    jeffbezoz@gmail.com
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+
 
                     <!-- Main Content Start -->
                     <div class="row ">
@@ -180,16 +166,16 @@
                             <div class="user-profile d-flex align-items-center justify-content-between ">
                                 <div class="d-flex up-cont1 align-items-center">
                                     <div class="profile-avatar">
-                                        <img src="https://avatars.githubusercontent.com/u/1148717?v=4"
+                                        <img src="https://mdbootstrap.com/img/new/avatars/8.jpg"
                                             class="img-fluid img-rounded" alt="" srcset="" width="60" height="60"
                                             style="border-radius: 50%; max-width: 100%;">
                                     </div>
                                     <div class="profile-id px-4">
                                         <div class="profile-name">
-                                            jef bezoz
+                                            Sumit Pareek
                                         </div>
                                         <div class="profile-email fs-13">
-                                            jeffbezoz@gmail.com
+                                            sumitpareek2003@gmail.com
                                         </div>
                                     </div>
 
@@ -223,8 +209,7 @@
                                 </div>
 
                                 <div class="row">
-
-                                    <div class="col-md-10 align-items-center ">
+                                    <div class="col-md-10 align-items-center  ">
                                         <div class="sub-body row justify-content-between ">
                                             <div class="col-md-4 py-3">
                                                 <div class="d-flex flex-column">
@@ -247,7 +232,7 @@
                                             <div class="col-md-5 py-3 ">
                                                 <div class="sub2-body d-flex gap-4 align-items-start ">
                                                     <div class="d-flex flex-column" style="width: 120px;">
-                                                        <div class="hour my-1" >
+                                                        <div class="hour my-1">
                                                             <div class="progress">
                                                                 <div class="progress-bar" role="progressbar"
                                                                     style="width: 45%;" aria-valuenow="45"
@@ -266,13 +251,149 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        
-                                            
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- "Team Worked for" Row Started -->
+                            <div class="row mx-2 mt-1">
+                                <div class="col-md-12 p-0 align-items-center">
+                                    <div class="mini-head my-2">
+                                        Teams Worked for
+                                    </div>
+                                    <div class="row team-boxes gap-2 px-1">
+                                        <div class="col-md-3 ">
+                                            <div class="team-name">
+                                                Robo Engineers
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 ">
+                                            <div class="team-name">
+                                                Eagle Eye
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3 mybdr-secondary bg-light">
+                                            <div class="team-name text-dark text-nowrap">
+                                                <span><i class="ri-add-line"></i></span> Add Team
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- "Team Worked for " Row End -->
+
+
+                            <!-- Assigned Project Row  Start -->
+                            <div class="row mx-2 mt-1">
+                                <div class="col-md-12 p-0 align-items-center">
+                                    <div class="mini-head my-2">
+                                        Assigned Projects
+                                    </div>
+                                    <div class="row team-boxes gap-2 px-1">
+                                        <div class="col-md-3 bg-white mybdr-secondary ">
+                                            <div class="team-name text-dark">
+                                                Robo Engineers
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 bg-white mybdr-secondary ">
+                                            <div class="team-name text-dark">
+                                                StartShip
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-3 mybdr-secondary bg-light">
+                                            <div class="team-name text-dark text-nowrap">
+                                                <span><i class="ri-add-line"></i></span> Assign Project
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Assigned Project Row Closed -->
+
+
+                            <!-- TimeSheet Approval Row Started -->
+                            <div class="row mx-1 mt-3">
+                                <div class="col-md-6">
+                                    <div class="px-0" style="font-size: 16px; font-weight: 600;">
+                                        Timesheet Approval <span><i class="ri-question-fill" data-bs-toggle="tooltip"
+                                                data-bs-html="true" data-bs-title="Control Wheather this member requires Timesheet Approval or not " style="font-size: 17px;"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch"
+                                            id="timesheet-approval">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Payment Row  Start -->
+                            <div class="row mx-2 mt-3">
+                                <div class="col-md-12 p-0 align-items-center">
+                                    <div class="mini-head">
+                                        Payment
+                                    </div>
+                                    <div class="row team-boxes  px-1">
+                                        <div class="col-md-3 bg-white border border-0">
+                                            <div class="team-name p-0 text-dark">
+                                                USD ($) 50.00 / hour
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Payment Row Closed -->
+
+
+                            <!-- Pay Row Started -->
+                            <form action="./dashv2.html" method="get">
+                                <div class="row mt-3 gap-3 px-2  align-items-center">
+                                    <div class="col-md-4">
+                                        <div class="mini-head">
+                                            Pay Rate
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 ">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <label for="pay-rate" class="text-nowrap fs-13">USD ($)</label>
+                                                    <input type="text" name="pay-rate"
+                                                        class="mmbr-edit-usd-input form-control" placeholder="345$"
+                                                        style="width: 60%;">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
+                                    <div class="col-md-4">
+                                        <div class="mini-head">
+                                            Bill Rate
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 ">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <label for="pay-rate" class=" text-nowrap fs-13">USD ($)</label>
+                                                    <input type="text" class="mmbr-edit-usd-input form-control"
+                                                        name="pay-rate" placeholder="345$" style="width: 60%;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 usd  pt-3">
+                                        <button type="submit" class="bg-green py-1 px-4">Save</button>
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
+                            <!-- Pay Row End -->
+
+
                         </div>
                     </div>
                 </div>
@@ -289,15 +410,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
+
     <!-- Custom Js Files  -->
     <script src="./js/custom_js.js"></script>
 
+
+    <!-- JavaScript Go Back on previous Page Function -->
     <script>
         function goBack() {
             window.history.back();
         }
     </script>
 
+
+    <!-- Progress Bar color  -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             updateProgressBarColors();
@@ -320,6 +446,13 @@
                 });
             }
         });
+    </script>
+
+
+    <!-- Tooltip JavaScript  -->
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     </script>
 </body>
 

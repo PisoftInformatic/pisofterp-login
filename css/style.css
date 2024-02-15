@@ -876,3 +876,66 @@ button{
    margin-top: 10px;
    margin-left: 5px;
 }
+
+.team-boxes>div{
+    border-radius: 7px;
+    margin: 4px;
+}
+.team-boxes>div:nth-child(2n+1){
+    border: #9A96F9 2px solid;
+    background-color: #9A96F9 ;
+}
+.team-boxes>div:nth-child(2n+2){
+    border:#73C0FF 2px solid;
+    background-color: #73C0FF;
+}
+
+.team-name{
+    font-size: 13px;
+    padding: 10px 10px;
+    color: white;
+    text-align: center;
+    text-wrap: nowrap;
+}
+
+
+
+.mmbr-edit-usd-input{
+    padding: 2px 10px !important;
+    border: #C2CCE1 1px solid;
+    border-radius: 7px;
+}
+.mmbr-edit-usd-input:focus,.mmbr-edit-usd-input:hover{
+    border: #20BEAD 1px solid !important;
+    box-shadow:#61e5ac77 2px 2px 10px !important;
+}
+
+.mmbr-edit-usd-input::-webkit-input-placeholder{
+   color: black;
+   font-size: 13px ;
+   font-weight: 700px;
+}
+
+.usd>button{
+    border-radius:7px ;
+    border: none;
+}
+.usd>button:hover{
+    background-color: #3db882 !important;
+    box-shadow: #3db882 1px 1px 10px !important;
+}
+
+.form-check-input{
+    height: 20px !important;
+    width: 40px !important;
+    border: 1.5px solid rgb(170, 167, 166) !important;
+    /* background-color: #242525d8 !important; */
+}
+
+
+.tooltip-inner {
+    background-color: #7b7b7e !important;
+    box-shadow: 0px 0px 4px black;
+    opacity: 1 !important;
+    font-size: 13px;
+}
