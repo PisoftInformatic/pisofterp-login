@@ -999,3 +999,8 @@ button{
     box-shadow: #61e5ac8a 1px 1px 10px !important ;
 }
 
+.add-org-form-input{
+    width:100% !important; 
+    height: 40px !important;
+}
+
