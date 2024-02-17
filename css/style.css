@@ -1004,3 +1004,34 @@ button{
     height: 40px !important;
 }
 
+
+
+
+/* Cross Hover */
+
+.cross-hover{
+    position: absolute;
+    top: -45%;
+    right: 2%;
+    font-size: 23px;
+    cursor: pointer;
+    /* display: none; */
+}
+
+.cross-hover > i{
+    background-color: white;
+    border-radius: 70%;
+}
+
+
+.hidden{
+    display: none;
+}
+
+    /* Position the toast container */
+    .toast-container {
+        position: fixed;
+        top: 50%;
+        right: 10px;
+        z-index: 9999; /* Ensure it appears above other elements */
+    }
