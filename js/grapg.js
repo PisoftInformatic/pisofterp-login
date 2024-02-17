@@ -54,9 +54,9 @@
 
 
   
-    //   ************     Chart 2 (total hours in week) js      ***********
+    //   ************     Chart 2 (FalconShip) js      ***********
     const c2xValues = ["P1", "P2"];
-    const c2yValues = [65, 209];  // Values are in the form of Minutes
+    const c2yValues = [215, 109];  // Values are in the form of Minutes
    
 
     // Calculate total hours
@@ -83,7 +83,7 @@
             },
             title: {
                 display: false,
-                text: `Graph 2`
+                text: `FalconShip`
             },
             scales: {
                 xAxes: [{
@@ -111,7 +111,7 @@
 
 
   
-    //   ************     Chart 3 (total hours in week) js      ***********
+    //   ************     Chart 3 (AllFixit) js      ***********
     const c3xValues = ["P1", "P2"];
     const c3yValues = [145, 209];  // Values are in the form of Minutes
    
@@ -173,13 +173,13 @@
   
     //   ************     Chart 4 (total hours in week) js      ***********
     // const c4xValues = ["P1"];
-    const c4yValues = [85];  // Values are in the form of Minutes
-    document.querySelector('.chart4-time').textContent = `${c4yValues[0]}%`;
+    // const c4yValues = [85];  // Values are in the form of Minutes
+    // document.querySelector('.chart4-time').textContent = `${c4yValues[0]}%`;
 
 
 
-// Row 5 Pie Chart (Donut Chart)
-const c5xValues = ["Mandeep", "Robert", "Disuja", "Parmod"];
+// ********************* Row 5 Pie Chart *************** (Donut Chart)
+const c5xValues = ["FalconShip", "AllFixit", "StarShip"];
 const c5yValues = [65, 209, 112];  // Values are in the form of Minutes
 
 // Calculate total hours
