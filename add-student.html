@@ -529,7 +529,6 @@ checkbox.addEventListener("click", function() {
         const cpincode = document.getElementById("cpincode");
   
   if (checkbox.checked) {
-      
       document.getElementById("ccountry").innerHTML= document.getElementById("pcountry").innerHTML;
       document.getElementById("cstate").innerHTML= document.getElementById("pstate").innerHTML;
       document.getElementById("cdistrict").innerHTML= document.getElementById("pdistrict").innerHTML;
@@ -540,8 +539,6 @@ checkbox.addEventListener("click", function() {
       caddress1.value = paddress1.value;
       caddress2.value = paddress2.value;
       cpincode.value = ppincode.value;
-
-   
   } 
   else {
     // Otherwise, clear the corresponding address
