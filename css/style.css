@@ -749,7 +749,7 @@ display: flex;
     font-weight: 500;
 }
 
-.weekly-time-limit{
+.weekly-time-limit, .text{
     margin: auto 0px !important;
 color: rgb(61, 77, 105) !important;
 font-size: 13.5px !important;
@@ -1029,9 +1029,23 @@ button{
 }
 
     /* Position the toast container */
-    .toast-container {
+.toast-container {
         position: fixed;
         top: 50%;
         right: 10px;
         z-index: 9999; /* Ensure it appears above other elements */
-    }
+}
+
+
+
+
+.active-cont, .archive-cont {
+        display: none;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+}
+
+.show-cont{
+    display: block !important;
+}
