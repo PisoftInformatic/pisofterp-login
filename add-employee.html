@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Employee</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Remix Icon CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+    <main class="d-flex">
+        <div class="sidebar  d-flex flex-column flex-shrink-0 p-3 ">
+            <!-- Arrow -->
+            <div class="sidebar-arrow">
+                <i class="ri-arrow-left-line"></i>
+            </div>
+
+            <!-- logo of the Sidebar -->
+            <a href="dashv2.html"
+                class=" logo-div d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <span class="fs-4 heading px-3">
+                    <img src="./img/logo.png" alt="" width="170">
+                </span>
+            </a>
+
+            <!-- Categories -->
+            <div class="category">
+                <div class="sub-heading">
+                    <h6 class="mb-0">Manage</h6>
+                </div>
+                <ul class=" mt-0 nav nav-pills flex-column mb-auto">
+                    <li>
+                        <a href="./dashv2.html" class="nav-link link-dark">
+                            <i class="ri-dashboard-line px-0" style="font-size: 20px;"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./organization.html" class="nav-link link-dark">
+                            <i class="ri-organization-chart " style="font-size: 20px;"></i>
+                            <span>Organization</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./members.html" class="nav-link link-dark">
+                            <i class="ri-user-line " style="font-size: 20px;"></i>
+                            <span>Members</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./student.html" class="nav-link link-dark">
+                            <i class="ri-admin-line " style="font-size: 20px;"></i>
+                            <span>Student Managment</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <div class="sub-heading">
+                    <h6 class="mb-0">Admin</h6>
+                </div>
+                <ul class=" mt-0 nav nav-pills flex-column mb-auto">
+                    <li>
+                        <a href="./employee.html" class="nav-link link-dark">
+                            <i class="ri-team-line"></i>
+                            <span>Employees</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link link-dark">
+                            <i class="ri-folders-line"></i>
+                            <span>Projects</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link link-dark">
+                            <i class="ri-file-chart-line"></i>
+                            <span>Reports</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link link-dark">
+                            <i class="ri-settings-2-line"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- Categories End -->
+
+
+            <hr>
+            <div class="dropdown position-absolute profile-container">
+                <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+                    id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://avatars.githubusercontent.com/u/67789838?v=4" alt="" width="32" height="32"
+                        class="rounded-circle me-2">
+                    <span>Profile</span>
+                </a>
+                <ul class="dropdown-menu profile-menu text-small shadow fade" aria-labelledby="dropdownUser2">
+                    <li><a class="dropdown-item" href="#">New project...</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="./login.html">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content  p-0 ">
+            <div class="alert-box  text-center">
+                Welcome to New <span style="padding-right: 5px;padding-left: 5px;">ERP</span> Portal
+            </div>
+
+            <!-- Main Page Data  -->
+            <div class="container-fluid pb-5">
+                <div class="d-flex flex-wrap page-header justify-content-between align-items-center">
+                    <h3 class="page-heading">
+                        Employee
+                    </h3>
+                    <p class="header-date m-0 " id="current-date"></p>
+                </div>
+
+                <div class="d-flex mb-3">
+                    <a href="#" class="back-arrow pback" onclick="goBack()">
+                        <i class="ri-arrow-left-line"></i> <span class=" px-3">Back to Employees</span>
+                    </a>
+                </div>
+
+                <!-- Main Data Container -->
+                <div class="data-container p-4">
+                    <div class="head fs-18 mb-4">
+                        Details of Employee
+                    </div>
+                    <form method="get">
+                        <div class="row my-3">
+                            <div class="col-md-3">
+                                <div class="img-upload d-flex flex-column gap-4">
+                                    <img src="./img/user-avatar.png" class="form-control img-fluid"
+                                        style="height: 150px; width: 150px;" alt="">
+                                    <input type="file" name="profile-avatar" id="profile-avatar"
+                                        style="font-size: 12px;">
+                                </div>
+                            </div>
+                            <div class="col-md-6 ">
+                                <div class="row justify-content-between">
+                                    <div class="col-md-6">
+                                        <div class="d-flex flex-column">
+                                            <label for="branches" class="org-form-label my-2 ">Branches</label>
+                                            <select name="branches" id="branches"
+                                                class="form-control org-form-input add-org-form-input">
+                                                <option value="">Head Office</option>
+                                                <option value="">Patalia</option>
+                                                <option value="">Mohali</option>
+                                                <option value="">Morinda</option>
+                                                <option value="">No Branch</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex flex-column">
+                                            <label for="department" class="org-form-label my-2 ">Department</label>
+                                            <select name="department" id="department"
+                                                class="form-control org-form-input add-org-form-input">
+                                                <option value="">Cashier</option>
+                                                <option value="">Accounts</option>
+                                                <option value="">Human Resource</option>
+                                                <option value="">Operations</option>
+                                                <option value="">Sales</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex flex-column">
+                                            <label for="designation" class="org-form-label my-2 ">Designation</label>
+                                            <select name="designation" id="designation"
+                                                class="form-control org-form-input add-org-form-input">
+                                                <option value="">Select Designation</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex flex-column">
+                                            <label for="employee-type" class="org-form-label my-2 ">Employee
+                                                Type</label>
+                                            <select name="employee-type" id="employee-type"
+                                                class="form-control org-form-input add-org-form-input">
+                                                <option value="full-time-employee"> Employee - Full Time</option>
+                                                <option value="part-time-employee">Emlpoyee -Part Time </option>
+                                                <option value="human-resource">Human Resource</option>
+                                                <option value="full-time-probation">Probation - Full Time</option>
+                                                <option value="part-time-probation">Probation - Part Time</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex flex-column">
+                                            <label for="addmission-date" class="org-form-label my-2 ">Joining
+                                                Date</label>
+                                            <input type="date" name="addmission-date" id="addmission-date"
+                                                class="form-control org-form-input add-org-form-input">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex flex-column">
+                                            <label for="branches" class="org-form-label my-2 ">Branches</label>
+                                            <select name="branches" id="branches"
+                                                class="form-control org-form-input add-org-form-input">
+                                                <option value="head office">Head Office</option>
+                                                <option value="patalia">Patalia</option>
+                                                <option value="mohali">Mohali</option>
+                                                <option value="mroinda">Morinda</option>
+                                                <option value="no branches">No Branch</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row gap-2 mybg-secondary py-3 ">
+                            <div class="col-md-3">
+                                <div class="d-flex flex-column">
+                                    <label for="name" class="org-form-label my-2 ">Employee Name</label>
+                                    <input type="text" class="form-control org-form-input add-org-form-input"
+                                        name="name" id="name">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="d-flex flex-column">
+                                    <label for="father-name" class="org-form-label my-2 ">Father's Name</label>
+                                    <input type="text" class="form-control org-form-input add-org-form-input"
+                                        name="father-name" id="father-name">
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="d-flex flex-column">
+                                    <label for="mother-name" class="org-form-label my-2 ">Mother's Name</label>
+                                    <input type="text" class="form-control org-form-input add-org-form-input"
+                                        name="mother-name" id="mother-name">
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="d-flex flex-column">
+                                    <label for="gender" class="org-form-label my-2 ">Gender</label>
+                                    <select name="gender" class="form-control org-form-input add-org-form-input"
+                                        id="gender">
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="d-flex flex-column">
+                                    <label for="email" class="org-form-label my-2 ">Email</label>
+                                    <input type="email" class="form-control org-form-input add-org-form-input"
+                                        name="email" id="email">
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="d-flex flex-column">
+                                    <label for="dob" class="org-form-label my-2 ">Date of Birth</label>
+                                    <input type="date" name="dob" id="dob"
+                                        class="form-control org-form-input add-org-form-input">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="d-flex flex-column">
+                                    <label for="dob" class="org-form-label my-2 ">Blood Group</label>
+                                    <select name="blood-group" id="blood-group"
+                                        class="form-control org-form-input add-org-form-input">
+                                        <option value="">A+</option>
+                                        <option value="">A-</option>
+                                        <option value="">B+</option>
+                                        <option value="">B-</option>
+                                        <option value="">AB-</option>
+                                        <option value="">O-</option>
+                                        <option value="">O+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="d-flex flex-column">
+                                    <label for="nation" class="org-form-label my-2 ">Nationality</label>
+                                    <select name="nation" id="nation"
+                                        class="form-control org-form-input add-org-form-input">
+                                        <option value="">Canadian</option>
+                                        <option value="">Indian</option>
+                                        <option value="">American</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="d-flex flex-column">
+                                    <label for="category" class="org-form-label my-2 ">Category</label>
+                                    <select name="category" id="category"
+                                        class="form-control org-form-input add-org-form-input">
+                                        <option value="">General</option>
+                                        <option value="">SC</option>
+                                        <option value="">ST</option>
+                                        <option value="">OBC</option>
+                                        <option value="">EWS</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="d-flex flex-column">
+                                    <label for="salary" class="org-form-label my-2 ">Salary</label>
+                                    <input type="text" name="salary" id="salary"
+                                        class="form-control org-form-input add-org-form-input"> </input>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="d-flex flex-column">
+                                    <label for="category" class="org-form-label my-2 ">Marital Status</label>
+                                    <select name="category" id="category"
+                                        class="form-control org-form-input add-org-form-input">
+                                        <option value="">Un-Married</option>
+                                        <option value="">Married</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="d-flex flex-column">
+                                    <label for="senior" class="org-form-label my-2 ">Senior (Report To)</label>
+                                    <select name="senior" id="senior"
+                                        class="form-control org-form-input add-org-form-input">
+                                        <option value="">Anju Mam</option>
+                                        <option value="">Mohit Sir</option>
+                                        <option value="">Jyot Mam</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <!-- Section 2 -->
+                        <div class="row my-4 gap-4">
+
+
+                            <div class="col-md-9">
+                                <div class="row">
+                                    <!-- Bottom Left -->
+                                    <div class="col-md-6  ">
+                                        <!-- Add Spouse -->
+                                        <div class="row">
+                                            <div class="col-md-7">
+                                                <label for="" class="text">Add Spouse Details</label>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="d-flex gap-3">
+                                                    <div>
+                                                        <label for="" class="text">No</label>
+                                                        <input type="radio" checked name="add-spouse" value="no"
+                                                            id="add-spouse-no">
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="text">Yes</label>
+                                                        <input type="radio" name="add-spouse" value="yes"
+                                                            id="add-spouse-yes">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Add Education -->
+                                        <div class="row">
+                                            <div class="col-md-7">
+                                                <label for="" class="text-nowrap text">Add Education Details</label>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="d-flex gap-3">
+                                                    <div>
+                                                        <label for="add-education-no" class="text">No</label>
+                                                        <input type="radio" name="add-education" checked value="no"
+                                                            id="add-education-no">
+                                                    </div>
+                                                    <div>
+                                                        <label for="add-education-yes" class="text">Yes</label>
+                                                        <input type="radio" name="add-education" value="yes"
+                                                            id="add-education-yes">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Add Address  -->
+                                        <div class="row">
+                                            <div class="col-md-7">
+                                                <label for="" class="text">Add Address</label>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="d-flex gap-3">
+                                                    <div>
+                                                        <label for="" class="text">No</label>
+                                                        <input type="radio" name="add-address" id="add-address-no"
+                                                            value="no" checked>
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="text">Yes</label>
+                                                        <input type="radio" name="add-address" id="add-address-yes"
+                                                            value="yes">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Bottom Right -->
+                                    <div class="col-md-6 ">
+                                        <div class="row">
+                                            <div class="col-md-7">
+                                                <label for="" class="text">Add Children Details</label>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="d-flex gap-3">
+                                                    <div>
+                                                        <label for="add-children-no " class="text">No</label>
+                                                        <input type="radio" name="add-children" id="add-children-no"
+                                                            value="no" checked>
+                                                    </div>
+                                                    <div>
+                                                        <label for="add-children-yes" class="text">Yes</label>
+                                                        <input type="radio" name="add-children" id="add-children-yes"
+                                                            value="yes">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-7">
+                                                <label for="" class="text text-nowrap">Add Experience Details</label>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="d-flex gap-3">
+                                                    <div>
+                                                        <label for="add-experience-no" class="text">No</label>
+                                                        <input type="radio" name="add-experience" id="add-experience-no"
+                                                            value="no" checked>
+                                                    </div>
+                                                    <div>
+                                                        <label for="add-experience-yes" class="text">Yes</label>
+                                                        <input type="radio" name="add-experience"
+                                                            id="add-experience-yes" value="yes">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-7">
+                                                <label for="" class="text">Add Document</label>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="d-flex gap-3">
+                                                    <div>
+                                                        <label for="add-document-no" class="text">No</label>
+                                                        <input type="radio" name="add-document" id="add-document-no"
+                                                            value="no" checked>
+                                                    </div>
+                                                    <div>
+                                                        <label for="add-document-yes" class="text">Yes</label>
+                                                        <input type="radio" name="add-document" id="add-document-yes"
+                                                            value="yes">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-9">
+                                <!-- Add Spouse Details Container -->
+                                <div class="row " id="add-spouse-cont" style="border-radius: 7px;">
+                                    <div class="col-md-12">
+                                        <div class="head fs-18 py-3 ">
+                                            Add Spouse Details
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="spouse-name" class="org-form-label my-2 ">Name</label>
+                                            <input type="text" name="spouse-name" id="spouse-name"
+                                                class="form-control org-form-input add-org-form-input"> </input>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="spouse-dob" class="org-form-label my-2 ">DOB</label>
+                                            <input type="date" pattern="d{4}/d{2}/d{2}" name="spouse-dob"
+                                                id="spouse-dob" class="form-control org-form-input add-org-form-input">
+                                            </input>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="spouse-occupation"
+                                                class="org-form-label my-2 ">Occupation</label>
+                                            <input type="text" name="spouse-occupation" id="spouse-occupation"
+                                                class="form-control org-form-input add-org-form-input"> </input>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="spouse-qualification"
+                                                class="org-form-label my-2 ">Qualification</label>
+                                            <input type="text" name="spouse-qualification" id="spouse-qualification"
+                                                class="form-control org-form-input add-org-form-input"> </input>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="spouse-contact" class="org-form-label my-2 ">Contact</label>
+                                            <input type="tel" minlength="10" maxlength="10" name="spouse-contact"
+                                                id="spouse-contact"
+                                                class="form-control org-form-input add-org-form-input"> </input>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Add Education Details Container -->
+                                <div class="row " id="add-edcuation-cont" style="border-radius: 7px;">
+                                    <div class="col-md-12">
+                                        <div class="head fs-18 py-3 ">
+                                            Add Education Details
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="education-board-name"
+                                                class="org-form-label my-2 ">University/Board</label>
+                                            <input type="text" name="education-board-name" id="education-board-name"
+                                                class="form-control org-form-input add-org-form-input"> </input>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="education-stream-name"
+                                                class="org-form-label my-2 ">Stream/Class</label>
+                                            <input type="text" name="education-stream-name" id="education-stream-name"
+                                                class="form-control org-form-input add-org-form-input"> </input>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="education-tmarks" class="org-form-label my-2 ">Total
+                                                Marks</label>
+                                            <input type="text" name="education-tmarks" id="education-tmarks"
+                                                class="form-control org-form-input add-org-form-input"> </input>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="education-omarks-name" class="org-form-label my-2 ">Obtained
+                                                Marks</label>
+                                            <input type="text" name="education-omarks-name" id="education-omarks-name"
+                                                class="form-control org-form-input add-org-form-input"> </input>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="education-passyear-name" class="org-form-label my-2 ">Passing
+                                                Year</label>
+                                            <input type="text" name="education-passyear-name"
+                                                id="education-passyear-name"
+                                                class="form-control org-form-input add-org-form-input"> </input>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="education-status-name"
+                                                class="org-form-label my-2 ">Status</label>
+                                            <select class="form-select org-form-input add-org-form-input">
+                                                <option value="">Select</option>
+                                                <option value="pass">Pass</option>
+                                                <option value="fail">Fail</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Add Address Details Container -->
+                                <div class="row " id="add-address-cont" style="border-radius: 7px;">
+                                    <div class="col-md-12">
+                                        <div class="head fs-18 py-3 ">
+                                            Add Address Details
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="adddress-country" class="org-form-label my-2 ">Country</label>
+                                            <!-- <input type="text" name="adddress-country" id="adddress-country"
+                                                class="form-control org-form-input add-org-form-input"> </input> -->
+                                            <select name="adddress-country" id="adddress-country "
+                                                class="form-select org-form-input add-org-form-input">
+                                                <option value="">Select Country</option>
+                                                <option value="Indian">India</option>
+                                                <option value="USA">Canada</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="adddress-state" class="org-form-label my-2 ">State</label>
+                                            <select name="adddress-state" id="adddress-state "
+                                                class="form-select org-form-input add-org-form-input">
+                                                <option value="">Select State</option>
+                                                <option value="Rajasthan">Rajasthan</option>
+                                                <option value="Haryana">Haryana</option>
+                                                <option value="Bihar">Bihar</option>
+                                                <option value="Delhi">Delhi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="adddress-district" class="org-form-label my-2 ">District</label>
+                                            <select name="adddress-district" id="adddress-district "
+                                                class="form-select org-form-input add-org-form-input">
+                                                <option value="">Select district</option>
+                                                <option value="Hanumngarh">Hanumngarh</option>
+                                                <option value="Tibbi">Tibbi</option>
+                                                <option value="Kohla">Kohla</option>
+                                                <option value="peer wali dhani">Dhani Peer Wali</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="adddress-city" class="org-form-label my-2 ">City</label>
+                                            <select name="adddress-city" id="adddress-city "
+                                                class="form-select org-form-input add-org-form-input">
+                                                <option value="">Select city</option>
+                                                <option value="Hanumngarh">Hanumngarh</option>
+                                                <option value="Tibbi">Tibbi</option>
+                                                <option value="Kohla">Kohla</option>
+                                                <option value="peer wali dhani">Dhani Peer Wali</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="adddress-address-l1" class="org-form-label my-2 ">Address Line
+                                                1</label>
+                                            <input type="text" name="adddress-address-l1" id="adddress-address-l1 "
+                                                class="form-control org-form-input add-org-form-input">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="adddress-address-l2" class="org-form-label my-2 ">Address Line
+                                                2</label>
+                                            <input type="text" name="adddress-address-l2" id="adddress-address-l2 "
+                                                class="form-control org-form-input add-org-form-input">
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                </div>
+
+                                <!-- Add Children Details Container -->
+                                <div class="row " id="add-children-cont" style="border-radius: 7px;">
+                                    <div class="col-md-12">
+                                        <div class="head fs-18 py-3 ">
+                                            Add Children Details
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="children-name" class="org-form-label my-2 ">Name</label>
+                                            <input type="text" name="children-name" id="children-name"
+                                                class="form-control org-form-input add-org-form-input"> </input>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="children-dob" class="org-form-label my-2 ">DOB</label>
+                                            <input type="date" name="children-dob" id="children-dob"
+                                                class="form-control org-form-input add-org-form-input">
+                                            </input>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="children-occupation"
+                                                class="org-form-label my-2 ">Occupation</label>
+                                            <input type="text" name="children-occupation" id="children-occupation"
+                                                class="form-control org-form-input add-org-form-input"> </input>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="children-qualification"
+                                                class="org-form-label my-2 ">Qualification</label>
+                                            <input type="text" name="children-qualification" id="children-qualification"
+                                                class="form-control org-form-input add-org-form-input"> </input>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="children-contact" class="org-form-label my-2 ">Contact</label>
+                                            <input type="tel" minlength="10" maxlength="10" name="children-contact"
+                                                id="children-contact"
+                                                class="form-control org-form-input add-org-form-input"> </input>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Add Experience Details Container -->
+                                <div class="row " id="add-experience-cont" style="border-radius: 7px;">
+                                    <div class="col-md-12">
+                                        <div class="head fs-18 py-3 ">
+                                            Add Experience Details
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="experience-org" class="org-form-label my-2 ">Organization
+                                                Name</label>
+                                            <input type="text" name="experience-org" id="experience-org"
+                                                class="form-control org-form-input add-org-form-input"> </input>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="experience-department"
+                                                class="org-form-label my-2 ">Department</label>
+                                            <input type="text" name="experience-department" id="experience-department"
+                                                class="form-control org-form-input add-org-form-input"> </input>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="experience-position"
+                                                class="org-form-label my-2 ">Position</label>
+                                            <input type="text" name="experience-position" id="experience-position"
+                                                class="form-control org-form-input add-org-form-input"> </input>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="experience-years" class="org-form-label my-2 ">Years</label>
+                                            <input type="text" name="experience-years" id="experience-years"
+                                                class="form-control org-form-input add-org-form-input"> </input>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="experience-from" class="org-form-label my-2 ">From</label>
+                                            <input type="date" name="experience-from" id="experience-from"
+                                                class="form-control org-form-input add-org-form-input">
+                                            </input>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="experience-to" class="org-form-label my-2 ">To</label>
+                                            <input type="date" name="experience-to" id="experience-to"
+                                                class="form-control org-form-input add-org-form-input">
+                                            </input>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Add Documents Details Container -->
+                                <div class="row " id="add-document-cont" style="border-radius: 7px;">
+                                    <div class="col-md-12">
+                                        <div class="head fs-18 py-3 ">
+                                            Add Documents Details
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="document-type" class="org-form-label my-2 ">Document
+                                                Type</label>
+                                            <select name="document-type" id="document-type"
+                                                class="form-control org-form-input add-org-form-input">
+                                                <option value="">Select Document Type</option>
+                                                <option value="aadhar-card">Aadhar Card</option>
+                                                <option value="driving-license">Driving License</option>
+                                            </select>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="document-number" class="org-form-label my-2 ">Document
+                                                Number</label>
+                                            <input type="text" name="document-number" id="document-number"
+                                                class="form-control org-form-input add-org-form-input"> </input>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="d-flex flex-column">
+                                            <label for="" class="text org-form-label my-2 ">Upload Documents</label>
+                                            <div class="input-group mb-3">
+                                                <input type="file"
+                                                    class="form-control org-form-input add-org-form-input"
+                                                    id="inputGroupFile02" style="height: 40px !important;">
+                                            </div>
+                                            <!-- <label class="input-group-text" for="inputGroupFile02">Upload</label> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="row my-4">
+                <div class="col-md-2">
+                    <button type="reset" class="btn btn-danger" style="width: 100%;">Reset</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-success" style="width: 100%;">Save</button>
+                </div>
+            </div>
+            </form>
+
+        </div>
+
+        </div>
+        </div>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <!-- Custom Js Files  -->
+    <script src="./js/custom_js.js"></script>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+
+    <!-- <script>
+
+        $(document).ready(function () {
+            $('input[name="add-spouse"]').change(function () {
+                var selectedValue = $('input[name="add-spouse"]:checked').val();
+                if (selectedValue == 'yes') {
+                    console.log("Selected Value: " + selectedValue);
+                } 
+                else if(selectedValue == 'no'){
+                    console.log("Selected Value " + selectedValue);
+                }
+               
+                else {
+                    console.log("Please select an option");
+                }
+            });
+        });
+
+    </script> -->
+
+</body>
+
+</html>

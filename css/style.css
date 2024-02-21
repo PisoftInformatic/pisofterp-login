@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 
+
+/* Variables */
+:root{
+--green-color: #1CB6A6;
+--orange-color:#EF7F1A;
+}
+
+
 * {
     box-sizing: border-box;
     padding: 0px;
@@ -1049,3 +1057,29 @@ button{
 .show-cont{
     display: block !important;
 }
+
+/* input[type="radio" ]{
+   accent-color:var(--green-color);
+   border-color: var(--orange-color);
+} */
+input[type='radio'] {
+    -webkit-appearance:none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    outline: none;
+    box-shadow: 0 0 1px 2px #8bc3f8;
+}
+
+input[type='radio']:before {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 60%;
+    margin: 20% auto;
+    border-radius: 50%;
+}
+input[type='radio']:checked:before {
+    background: #7cb3e7;
+}
+
