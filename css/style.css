@@ -117,7 +117,16 @@ body {
 }
 
 
-
+.active-nav{
+    background-color: var(--green-color) !important;
+    color: white !important;
+    border-radius: 7px;
+    /* margin-top: 5px !important; */
+    /* margin-bottom: 5px !important; */
+}
+.active-nav>*{
+    color: white !important;
+}
 
 
 .sidebar {
@@ -133,6 +142,7 @@ body {
     font-size: 13px;
     color: rgba(61, 77, 105, 0.8);
     margin-left: 5px;
+    padding: 5px;
 }
 
 .nav-pills>li>a>i {
@@ -142,10 +152,12 @@ body {
 .sidebar {
     border-right: 1px solid rgb(224, 224, 224);
     position: relative;
-    background-color: #fff;
+    background-color: #ffffff;
     position: fixed;
     transition: all ease-in-out 1.2s;
+   
 }
+
 
 /*
 
@@ -230,13 +242,19 @@ Side bar new code
     display: flex;
     justify-content: start;
     align-items: center;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 .nav-pills>li>a {
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 600 !important;
     color: rgb(61, 77, 105) !important;
-    padding: 6px 0px !important;
+    padding: 2px 4px !important;
+    width: 100%;
+}
+.nav-link{
+    display: flex !important;
+    align-items: center;
 }
 
 .nav-pills>li>a:hover {
@@ -245,7 +263,7 @@ Side bar new code
 
 .sub-heading>h6 {
     margin-top: 15px;
-    margin-left: 20px;
+    margin-left: 12px;
     font-size: 13px;
     font-weight: 600;
     color: rgba(61, 77, 105, 0.8);
@@ -531,7 +549,7 @@ New
     border: 2px solid rgb(226, 223, 223);
     padding: 7px;
     margin-bottom: 10px;
-    margin-top: 7px !important;
+    margin-top: 4px;
     font-size: 14px;
     font-weight: 500;
     border-radius: 20px;
@@ -1103,4 +1121,10 @@ input[type='radio']:checked:before {
 canvas{
     max-width: 100% !important; /* Ensure the chart doesn't exceed the container's width */
     height: 100% !important; /* Allow the height to adjust accordingly */
+}
+
+.vertical-pb-no{
+        font-size: 12px ;
+        font-weight: 600;
+        color: rgb(104, 104, 104);
 }

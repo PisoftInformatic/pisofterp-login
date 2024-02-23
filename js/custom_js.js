@@ -1,3 +1,14 @@
+document.addEventListener("DOMContentLoaded", function() {
+  const currentUrl = window.location.href;
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  navLinks.forEach(link => {
+    const linkUrl = link.href;
+    if (currentUrl === linkUrl) {
+      link.classList.add("active-nav");
+    }
+  });
+});
 
 // // Collaspe SideBar
        
