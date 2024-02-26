@@ -16,110 +16,186 @@
 <body>
     <main class="d-flex">
         <!-- Sidebar -->
-        <div class="sidebar d-flex flex-column flex-shrink-0 p-3 ">
+        <div class="sidebar  px-3 py-0">
             <!-- Arrow -->
             <div class="sidebar-arrow">
                 <i class="ri-menu-line"></i>
             </div>
-
-            <!-- logo of the Sidebar -->
-            <a href="dashv2.html"
-                class=" logo-div d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-                <span class="fs-4 heading px-3">
-                    <img src="./img/logo.png" alt="" width="170">
-                </span>
-            </a>
-
-            <!-- Categories -->
-            <div class="category">
-                <div class="sub-heading">
-                    <h6 class="mb-2">Manage</h6>
-                </div>
-                <ul class=" mt-0 nav nav-pills flex-column mb-auto">
-                    <li class="">
-                        <a href="./dashv2.html" class="nav-link link-dark sidebar-li">
-                            <i class="ri-dashboard-line px-0" style="font-size: 20px;"></i>
-                            <span>Dashboard</span>
-                        </a>
-                    </li>
-
-                    <li class="">
-                        <a href="./organization.html" class="nav-link link-dark sidebar-li">
-                            <i class="ri-organization-chart " style="font-size: 20px;"></i>
-                            <span>Organization</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="./members.html" class="nav-link link-dark">
-                            <i class="ri-user-line " style="font-size: 20px;"></i>
-                            <span>Members</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="./student.html" class="nav-link link-dark">
-                            <i class="ri-admin-line " style="font-size: 20px;"></i>
-                            <span>Student Managment</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="category">
-                <div class="sub-heading">
-                    <h6 class="mb-2">Admin</h6>
-                </div>
-                <ul class=" mt-0 nav nav-pills flex-column mb-auto">
-                    <li>
-                        <a href="./employee.html" class="nav-link link-dark">
-                            <i class="ri-team-line"></i>
-                            <span>Employees</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="nav-link link-dark">
-                            <i class="ri-folders-line"></i>
-                            <span>Projects</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="nav-link link-dark">
-                            <i class="ri-file-chart-line"></i>
-                            <span>Reports</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link link-dark">
-                            <i class="ri-settings-2-line"></i>
-                            <span>Settings</span>
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-            <!-- Categories End -->
-
-
-            <hr>
-            <div class="dropdown position-absolute profile-container">
-                <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
-                    id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://avatars.githubusercontent.com/u/67789838?v=4" alt="" width="32" height="32"
-                        class="rounded-circle me-2">
-                    <span>Profile</span>
+            <div class="navnav">
+                <!-- logo of the Sidebar -->
+                <a href="dashv2.html"
+                    class=" logo-div d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                    <span class="fs-4 heading px-3">
+                        <img src="./img/logo.png" alt="" width="170">
+                    </span>
                 </a>
-                <ul class="dropdown-menu profile-menu text-small shadow fade" aria-labelledby="dropdownUser2">
-                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="./login.html">Sign out</a></li>
-                </ul>
+                <div class="nav-content">
+                    <!-- Categories -->
+                    <div class="category">
+                        <div class="sub-heading">
+                            <h6 class="mb-2">Manage</h6>
+                        </div>
+                        <ul class=" mt-0 nav nav-pills flex-column mb-auto">
+                            <li class="">
+                                <a href="./dashv2.html" class="nav-link link-dark sidebar-li">
+                                    <i class="ri-dashboard-line px-0" style="font-size: 20px;"></i>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+
+                            <li class="">
+                                <a href="./organization.html" class="nav-link link-dark sidebar-li">
+                                    <i class="ri-organization-chart " style="font-size: 20px;"></i>
+                                    <span>Organization</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="./members.html" class="nav-link link-dark">
+                                    <i class="ri-user-line " style="font-size: 20px;"></i>
+                                    <span>Members</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="./student.html" class="nav-link link-dark">
+                                    <i class="ri-admin-line " style="font-size: 20px;"></i>
+                                    <span>Student Managment</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Categories -->
+                    <div class="category">
+                        <div class="sub-heading">
+                            <h6 class="mb-2">Manage</h6>
+                        </div>
+                        <ul class=" mt-0 nav nav-pills flex-column mb-auto">
+                            <li class="collapsible">
+                                <a href="#" class="nav-link link-dark sidebar-li">
+                                    <i class="ri-dashboard-line px-0" style="font-size: 20px;"></i>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="collapsible d-flex flex-column  align-items-start">
+                                <a href="#" class="nav-link link-dark sidebar-li ">
+                                    <i class="ri-organization-chart " style="font-size: 20px;"></i>
+                                    <span>Organization <span class="sidebar-coll-arrow"><i
+                                                class="ri-arrow-right-s-line"></i></span></span>
+                                </a>
+                                <ul class="sub-menu  px-0 m-0 nav-pills" style="list-style: none;">
+                                    <li class="collapsible d-flex flex-column "><a href="#1"
+                                            class="nav-link link-dark sidebar-li">Employess <span
+                                                class="sidebar-coll-arrow"><i
+                                                    class="ri-arrow-right-s-line"></i></span></a>
+                                        <ul class="sub-menu px-0 m-0 nav-pills" style="list-style: none;">
+                                            <li class="collapsible d-flex flex-column "><a href="#11"
+                                                    class="nav-link link-dark sidebar-li">Add Employees <span
+                                                        class="sidebar-coll-arrow"><i
+                                                            class="ri-arrow-right-s-line"></i></span></a>
+                                                <ul class="sub-menu  px-0 m-0 nav-pills" style="list-style: none;">
+                                                    <li class="collapsible d-flex flex-column "><a href="#1"
+                                                            class="nav-link link-dark sidebar-li">Departments <span
+                                                                class="sidebar-coll-arrow"><i
+                                                                    class="ri-arrow-right-s-line"></i></span></a>
+                                                        <ul class="sub-menu px-0 m-0 nav-pills"
+                                                            style="list-style: none;">
+                                                            <li class=""><a href="./organization.html"
+                                                                    class="nav-link link-dark sidebar-li text-nowrap">Software
+                                                                    Developer</a>
+                                                            </li>
+                                                            <li class=""><a href="#21"
+                                                                    class="nav-link link-dark side   bar-li">Java
+                                                                    Developer</a>
+                                                            </li>
+                                                            <li class=""><a href="#31"
+                                                                    class="nav-link link-dark sidebar-li">Python
+                                                                    Developer</a>
+                                                            </li>
+
+                                                        </ul>
+                                                    </li>
+                                                    <li class=""><a href="#2"
+                                                            class="nav-link link-dark sidebar-li">Payments</a>
+                                                    </li>
+                                                    <li class=""><a href="#3"
+                                                            class="nav-link link-dark sidebar-li">Departments</a></li>
+
+                                                </ul>
+                                            </li>
+                                            <li class=""><a href="#21" class="nav-link link-dark sidebar-li">View
+                                                    Employees</a>
+                                            </li>
+                                            <li class=""><a href="#31" class="nav-link link-dark sidebar-li">ID Card</a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li class=""><a href="#2" class="nav-link link-dark sidebar-li">Payments</a></li>
+                                    <li class=""><a href="#3" class="nav-link link-dark sidebar-li">Departments</a></li>
+
+                                </ul>
+                            </li>
+
+
+                            <!-- Add more list items here -->
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <div class="sub-heading">
+                            <h6 class="mb-2">Admin</h6>
+                        </div>
+                        <ul class=" mt-0 nav nav-pills flex-column mb-auto">
+                            <li>
+                                <a href="./employee.html" class="nav-link link-dark">
+                                    <i class="ri-team-line"></i>
+                                    <span>Employees</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="nav-link link-dark">
+                                    <i class="ri-folders-line"></i>
+                                    <span>Projects</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="nav-link link-dark">
+                                    <i class="ri-file-chart-line"></i>
+                                    <span>Reports</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link link-dark">
+                                    <i class="ri-settings-2-line"></i>
+                                    <span>Settings</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- Categories End -->
+                </div>
+
+
+                <div class="dropdown position-absolute profile-container  bg-white">
+                    <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+                        id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://avatars.githubusercontent.com/u/67789838?v=4" alt="" width="32" height="32"
+                            class="rounded-circle me-2">
+                        <span>Profile</span>
+                    </a>
+                    <ul class="dropdown-menu profile-menu text-small shadow fade" aria-labelledby="dropdownUser2">
+                        <li><a class="dropdown-item" href="#">New project...</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="./login.html">Sign out</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -326,7 +402,7 @@
                         </div>
 
 
-                         <!-- Section 2 -->
+                        <!-- Section 2 -->
                         <div class="row my-4">
                             <div class="col-md-12">
                                 <div class="head fs-18 mb-3">
@@ -372,42 +448,47 @@
                                     <div class="col-md-4">
                                         <div class="d-flex flex-column">
                                             <label for="pcity" class="org-form-label my-2 ">City </label>
-                                           <input type="text" class="form-control org-form-input add-org-form-input" name="pcity" id="pcity">
+                                            <input type="text" class="form-control org-form-input add-org-form-input"
+                                                name="pcity" id="pcity">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="d-flex flex-column">
                                             <label for="paddress1" class="org-form-label my-2 ">Address Line 1 </label>
-                                           <input type="text" class="form-control org-form-input add-org-form-input" name="paddress1" id="paddress1">
+                                            <input type="text" class="form-control org-form-input add-org-form-input"
+                                                name="paddress1" id="paddress1">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="d-flex flex-column">
                                             <label for="paddress2" class="org-form-label my-2 ">Address Line 2 </label>
-                                           <input type="text" class="form-control org-form-input add-org-form-input" name="paddress2" id="paddress2">
+                                            <input type="text" class="form-control org-form-input add-org-form-input"
+                                                name="paddress2" id="paddress2">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="d-flex flex-column">
                                             <label for="ppincode" class="org-form-label my-2 ">Pin Code </label>
-                                           <input type="text" class="form-control org-form-input add-org-form-input" name="ppincode" id="ppincode">
+                                            <input type="text" class="form-control org-form-input add-org-form-input"
+                                                name="ppincode" id="ppincode">
                                         </div>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
 
 
-                         <!-- Section 3 Corresponding Addresss  -->
+                        <!-- Section 3 Corresponding Addresss  -->
                         <div class="row my-4">
                             <div class="col-md-12">
                                 <div class="head fs-18 px-0 ml-0 mr-3">
                                     Student Corresponding Address
                                 </div>
                                 <div class="text fs-14 d-flex">
-                                    <span class="">Same as Permanent Address</span> 
-                                    <input type="checkbox" name="same-address-checkbox" id="same-address-checkbox" class="mx-3">
+                                    <span class="">Same as Permanent Address</span>
+                                    <input type="checkbox" name="same-address-checkbox" id="same-address-checkbox"
+                                        class="mx-3">
                                 </div>
                             </div>
 
@@ -449,29 +530,33 @@
                                     <div class="col-md-4">
                                         <div class="d-flex flex-column">
                                             <label for="ccity" class="org-form-label my-2 ">City </label>
-                                           <input type="text" class="form-control org-form-input add-org-form-input" name="ccity" id="ccity">
+                                            <input type="text" class="form-control org-form-input add-org-form-input"
+                                                name="ccity" id="ccity">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="d-flex flex-column">
                                             <label for="caddress1" class="org-form-label my-2 ">Address Line 1 </label>
-                                           <input type="text" class="form-control org-form-input add-org-form-input" name="caddress1" id="caddress1">
+                                            <input type="text" class="form-control org-form-input add-org-form-input"
+                                                name="caddress1" id="caddress1">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="d-flex flex-column">
                                             <label for="caddress2" class="org-form-label my-2 ">Address Line 2 </label>
-                                           <input type="text" class="form-control org-form-input add-org-form-input" name="caddress2" id="caddress2">
+                                            <input type="text" class="form-control org-form-input add-org-form-input"
+                                                name="caddress2" id="caddress2">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="d-flex flex-column">
                                             <label for="cpincode" class="org-form-label my-2 ">Pin Code </label>
-                                           <input type="text" class="form-control org-form-input add-org-form-input" name="cpincode" id="cpincode">
+                                            <input type="text" class="form-control org-form-input add-org-form-input"
+                                                name="cpincode" id="cpincode">
                                         </div>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
 
@@ -508,53 +593,53 @@
         }
     </script>
 
-<script type="text/javascript">
-const checkbox = document.getElementById("same-address-checkbox");
-// Add an event listener to the checkbox
-checkbox.addEventListener("click", function() {
-  // If the checkbox is checked, copy the permanent address to the corresponding address
-  
-        /* permanent Address */
-        const pcountry = document.getElementById("pcountry");
-        const pstate = document.getElementById("pstate");
-        const pdist = document.getElementById("pdistrict");
-        const pcity = document.getElementById("pcity");
-        const paddress1 = document.getElementById("paddress1");
-        const paddress2 = document.getElementById("paddress2");
-        const ppincode = document.getElementById("ppincode");
-        
-        /* 	corrosponding address */
-        const ccountry = document.getElementById("ccountry");
-        const cstate = document.getElementById("cstate");
-        const cdist = document.getElementById("pdistrict");
-        const ccity = document.getElementById("ccity");
-        const caddress1 = document.getElementById("caddress1");
-        const caddress2 = document.getElementById("caddress2");
-        const cpincode = document.getElementById("cpincode");
-  
-  if (checkbox.checked) {
-      document.getElementById("ccountry").innerHTML= document.getElementById("pcountry").innerHTML;
-      document.getElementById("cstate").innerHTML= document.getElementById("pstate").innerHTML;
-      document.getElementById("cdistrict").innerHTML= document.getElementById("pdistrict").innerHTML;
-      ccountry.value= pcountry.value;
-      cstate.value= pstate.value;
-      cdist.value= pdist.value;
-      ccity.value = pcity.value;
-      caddress1.value = paddress1.value;
-      caddress2.value = paddress2.value;
-      cpincode.value = ppincode.value;
-  } 
-  else {
-    // Otherwise, clear the corresponding address
-     ccountry.value="";
-     cstate.value="";
-     cdist.value="";
-     ccity.value="";
-     caddress1.value="";
-     caddress2.value="";
-  }
-});
-</script>
+    <script type="text/javascript">
+        const checkbox = document.getElementById("same-address-checkbox");
+        // Add an event listener to the checkbox
+        checkbox.addEventListener("click", function () {
+            // If the checkbox is checked, copy the permanent address to the corresponding address
+
+            /* permanent Address */
+            const pcountry = document.getElementById("pcountry");
+            const pstate = document.getElementById("pstate");
+            const pdist = document.getElementById("pdistrict");
+            const pcity = document.getElementById("pcity");
+            const paddress1 = document.getElementById("paddress1");
+            const paddress2 = document.getElementById("paddress2");
+            const ppincode = document.getElementById("ppincode");
+
+            /* 	corrosponding address */
+            const ccountry = document.getElementById("ccountry");
+            const cstate = document.getElementById("cstate");
+            const cdist = document.getElementById("pdistrict");
+            const ccity = document.getElementById("ccity");
+            const caddress1 = document.getElementById("caddress1");
+            const caddress2 = document.getElementById("caddress2");
+            const cpincode = document.getElementById("cpincode");
+
+            if (checkbox.checked) {
+                document.getElementById("ccountry").innerHTML = document.getElementById("pcountry").innerHTML;
+                document.getElementById("cstate").innerHTML = document.getElementById("pstate").innerHTML;
+                document.getElementById("cdistrict").innerHTML = document.getElementById("pdistrict").innerHTML;
+                ccountry.value = pcountry.value;
+                cstate.value = pstate.value;
+                cdist.value = pdist.value;
+                ccity.value = pcity.value;
+                caddress1.value = paddress1.value;
+                caddress2.value = paddress2.value;
+                cpincode.value = ppincode.value;
+            }
+            else {
+                // Otherwise, clear the corresponding address
+                ccountry.value = "";
+                cstate.value = "";
+                cdist.value = "";
+                ccity.value = "";
+                caddress1.value = "";
+                caddress2.value = "";
+            }
+        });
+    </script>
 
 
 </body>

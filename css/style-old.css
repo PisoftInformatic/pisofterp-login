@@ -130,7 +130,7 @@ body {
 
 
 .sidebar {
-    height: 100%; 
+    height: 100vh; 
     font-weight: 400;
     width: 230px;
     z-index: 999;
@@ -140,28 +140,6 @@ body {
     position: fixed;
     transition: all ease-in-out 1.2s;
   
-}
-.nav-content{
-    /* border: 2px solid green; */
-    overflow-y: scroll;
-    height: 81lvh;
-    
-}
-
-.sidebar-coll-arrow{
-    font-size: 15px ;
-    font-weight: 800 !important;
-    color: red;
-}
-
-.nav-content::-webkit-scrollbar {
-    display: none;
-  }
-
-  .profile-container {
-    bottom: 10px !important;
-    bottom: 1% !important;
-    padding-top: 10px;
 }
 
 
@@ -175,13 +153,6 @@ body {
 
 .nav-pills>li>a>i {
     font-size: 20px;
-}
-.link-dark{
-    font-size: 13px !important;
-    font-family: 'Montserrat', sans-serif !important;
-    color: rgba(61, 77, 105, 0.8) !important;
-    font-weight: 500 !important;
-
 }
 
 
@@ -269,14 +240,14 @@ Side bar new code
     display: flex;
     justify-content: start;
     align-items: center;
-    padding-left: 6px;
+    padding-left: 10px;
 }
 
 .nav-pills>li>a {
     font-size: 13px;
-    font-weight: 600 ;
-    color: rgb(61, 77, 105);
-    padding: 2px 0px;
+    font-weight: 600 !important;
+    color: rgb(61, 77, 105) !important;
+    padding: 2px 4px !important;
     width: 100%;
 }
 .nav-link{
@@ -301,6 +272,10 @@ Side bar new code
     margin-top: 10px;
 }
 
+
+.profile-container {
+    bottom: 10px !important;
+}
 
 
 
@@ -1157,12 +1132,6 @@ canvas{
 }
 .nav-third-level {
     display: none;
-}
-
-.collapsible > ul {
-    font-size: 13px !important;
-    color: rgba(61, 77, 105, 0.8) !important;
-    margin-left: 5px !important;
 }
 
 

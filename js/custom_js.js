@@ -1,3 +1,33 @@
+$(document).ready(function () {
+  // Function to handle click event on collapsible items
+  $('.collapsible > .nav-link').click(function (event) {
+      event.preventDefault(); // Prevent default link behavior
+      var parentCollapsible = $(this).closest('.collapsible');
+      var isExpanded = parentCollapsible.hasClass('active');
+
+      // Close all collapsibles at this level and below if they are currently expanded
+      if (isExpanded) {
+          parentCollapsible.removeClass('active');
+          parentCollapsible.find('.collapsible').removeClass('active');
+          parentCollapsible.find('.sub-menu').slideUp();
+      } else {
+          // Close all collapsibles at this level and below
+          parentCollapsible.siblings().removeClass('active');
+          parentCollapsible.siblings().find('.sub-menu').slideUp();
+          // Open the clicked collapsible
+          parentCollapsible.addClass('active');
+          parentCollapsible.children('.sub-menu').slideDown();
+      }
+  });
+
+  // Prevent collapsing when clicking on the child of a collapsible item
+  $('.sub-menu .nav-link').click(function (event) {
+      event.stopPropagation(); // Prevent event from bubbling up to parent collapsible
+  });
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
   const currentUrl = window.location.href;
   const navLinks = document.querySelectorAll(".nav-link");
