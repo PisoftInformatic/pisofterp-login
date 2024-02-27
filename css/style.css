@@ -20,38 +20,6 @@
 }
 
 
-@media only screen and (max-width: 600px) {
-    .barstick-container {
-        width: 10px;
-        margin: 10px 5px;
-    }
-
-    .bs-dc {
-        width: 100% !important;
-    }
-    .row > div{
-        margin-top: 15px !important;
-    }
-    .timesheet-container{
-        grid-template-columns: 30.5% 30.5% 30.5% !important;
-    }
-    .timesheet-col{
-        min-height: 340px !important;
-    }
-    .bar-container{
-        width: 90% !important;
-        /* margin: auto !important; */
-
-    }
-    .graph-container{
-        height: 250px !important;
-    }
-    /* .piechart{
-        width: 350px !important;
-        height: 170px !important;
-    } */
-
-}
 
 /* .piechart{
     width: 400px;
@@ -159,6 +127,7 @@ body {
   }
 
   .profile-container {
+    position: fixed;
     bottom: 10px !important;
     bottom: 1% !important;
     padding-top: 10px;
@@ -334,7 +303,7 @@ Side bar new code
 }
 
 .page-header {
-    padding: 15px;
+    padding: 15px 0px; 
 }
 
 .page-heading {
@@ -667,39 +636,6 @@ chart
 }
 
 
-/*  */
-@media only screen and (max-width: 600px) {
-    .piechart-container{
-        width: 70% !important;
-    }
-    #myChart5{
-        width: 250px !important;
-        height: 250px !important;
-    }
-    .tm-details-pbar {
-        flex-wrap: wrap ;
-        margin-top: 20px !important;
-    }
-
-    .clock-tmd-text{
-        width: 150px !important;
-    }
-    .clk-td-cont{
-        /* border: 2px solid red; */
-        /* flex-wrap: wrap; */
-        margin-top: 10px;
-    }
-    .clk-td-text{
-        width: 380px;
-        min-width: 140px;
-        /* border: 2px solid slateblue; */
-    }
-    .clk-td-clk{
-        width: 115px;
-    }
-        
-
-}
 
 /* .piechart-container{
     width: 30%;
@@ -708,10 +644,6 @@ chart
 #myChart5{
     width: 100%;
 }
-
-
-
-
 
 /* Members Page  */
 .members-table{
@@ -936,15 +868,6 @@ button{
     cursor: not-allowed !important;
 }
 
-@media only screen and (max-width: 600px) {
-    .input-field{
-        width: 190px !important;
-    }
-    .sub-body{
-        flex-wrap: wrap;
-        /* justify-content: center; */
-    }
-}
 
 
 /* user Details */
@@ -1166,3 +1089,72 @@ canvas{
 }
 
 
+
+
+
+/* Media Query */
+
+@media only screen and (max-width: 600px) {
+    .piechart-container{
+        width: 70% !important;
+    }
+    #myChart5{
+        width: 250px !important;
+        height: 250px !important;
+    }
+    .tm-details-pbar {
+        flex-wrap: wrap ;
+        margin-top: 20px !important;
+    }
+
+    .clock-tmd-text{
+        width: 150px !important;
+    }
+    .clk-td-cont{
+
+        margin-top: 10px;
+    }
+    .clk-td-text{
+        width: 380px;
+        min-width: 140px;
+    }
+    .clk-td-clk{
+        width: 115px;
+    }
+    .barstick-container {
+        width: 10px;
+        margin: 10px 5px;
+    }
+    .bs-dc {
+        width: 100% !important;
+    }
+    .row > div{
+        margin-top: 15px !important;
+    }
+    .timesheet-container{
+        grid-template-columns: 30.5% 30.5% 30.5% !important;
+    }
+    .timesheet-col{
+        min-height: 340px !important;
+    }
+    .bar-container{
+        width: 90% !important;
+    }
+    .graph-container{
+        height: 250px !important;
+    }
+    .input-field{
+        width: 190px !important;
+    }
+    .sub-body{
+        flex-wrap: wrap;        
+    }
+   
+
+}
+
+
+
+.tm-details>*> span{
+    text-wrap: nowrap !important;
+}
