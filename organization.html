@@ -25,6 +25,7 @@
         <i class="ri-menu-line"></i>
       </div>
       <div class="navnav">
+
         <!-- logo of the Sidebar -->
         <a href="dashv2.html"
           class=" logo-div d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
@@ -174,7 +175,7 @@
         </div>
 
 
-        <div class="dropdown position-absolute profile-container  bg-white">
+        <div class="dropdown profile-container  bg-white">
           <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
             id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="https://avatars.githubusercontent.com/u/67789838?v=4" alt="" width="32" height="32"
@@ -195,56 +196,96 @@
     </div>
 
     <div class="main-content  p-0">
-      <div class="alert-box   text-center">
+      <div class="alert-box text-center">
         Welcome to New <span style="padding-right: 5px;padding-left: 5px;">ERP</span> Portal
       </div>
       <!-- Main Page Data  -->
-      <div class="container-fluid">
-        <div class="d-flex page-header justify-content-between align-items-center">
+      <div class="container-fluid px-3">
+        <div class="d-flex flex-wrap page-header justify-content-between  align-items-center">
           <h3 class="page-heading">
             Organizations
           </h3>
           <p class="header-date m-0 " id="current-date"></p>
         </div>
-        <div class="row justify-content-between ">
+        <!-- <div class="row justify-content-between ">
           <div class="control-tab col-md-6">
             <div class="row">
-              <div class="switch-tab-cont col-md-4  mx-2 mb-0">
+              <div class="switch-tab-cont col-md-4  mb-0">
                 <div class="d-flex  flex-column">
                   <div class="mini-head">
                     Type
                   </div>
-                  <div class="switch-button mybdr-secondary p-1 mt-1 justify-content-center  bg-white  d-flex"
+                  <div class="switch-button mybdr-secondary px-2 py-1 mt-1 justify-content-center  bg-white  d-flex"
                     style="border-radius: 7px;">
-                    <button type="button" class="switch-btn bg-green px-2 py-1 mybdr-secondary"
+                    <button type="button" class="switch-btn bg-green px-2 mx-2  py-1 mybdr-secondary"
                       style="border-radius: 7px ;">Active</button>
-                    <button type="button" class="switch-btn  bg-white   px-2 py-1 mx-1"
+                    <button type="button" class="switch-btn  bg-white  "
                       style=" border: none;">Archived</button>
                   </div>
                 </div>
               </div>
 
-              <div class="search-box col-md-7 col-sm-2 px-0 mx-2">
-                <div class="d-flex  flex-column mx-2">
+              <div class="search-box col-md-7 px-0">
+                <div class="d-flex  flex-column">
                   <div class="mini-head pt-0    ">
                     Search Organization
                   </div>
                   <div class="switch-button mt-1  d-flex">
-                    <input type="text" class="search mybdr-secondary py-2 px-2"
+                    <input type="text" class="search mybdr-secondary "
                       placeholder="Search Organizations By Name" style="width: 100%;">
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="invite-btn col-md-3 d-flex justify-content-center align-items-center ">
+          <div class="invite-btn col-md-3 d-flex justify-content-end align-items-center ">
             <a href="./add-org.html" class="bg-green py-2 mb-0  px-3 invite-mmbr-btn"><span><i
                   class="ri-add-line"></i></span> Add Organization</a>
           </div>
+        </div> -->
+
+        <div class="control-container row align-items-center justify-content-between">
+          <!-- Left Side Div -->
+          <div class="col-md-6 gap-2 ">
+            <div class="row align-items-end ">
+            <div class="col-md-5 col-sm-4" style="max-width: 200px;">
+              <div class="mini-head mb-1">
+                Type
+              </div>
+              <div class="d-flex gap-2 justify-content-center mybdr-secondary bg-white " style="border-radius: 7px; padding: 5px 10px;">
+                <div class="switch-btn  switch-active">
+                 <span class="switch-span"><i class="ri-book-line"></i></span> Active
+                </div>
+                <div class="switch-btn">
+                 <span class="switch-span"><i class="ri-archive-line"></i></span> Archived
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-5">         
+             <div class="d-flex flex-column">
+              <div class="mini-head mb-1">
+                Search Organization
+              </div>
+              <div>
+                <input type="text" class="org-control-input form-control org-form-input" placeholder="Search Org By Name">
+              </div>
+             </div>
+            </div>
+          </div>
+          </div>
+
+          <!-- Right Side Div -->
+          <div class="col-md-3 ">
+            <div class="d-flex justify-content-end">
+              <a href="./add-org.html" class="bg-green py-2 mb-0  px-3 invite-mmbr-btn"><span><i
+                class="ri-add-line"></i></span> Add Organization</a>
+              </div> 
+              </div>
         </div>
 
+
         <!-- table Section -->
-        <div class="members-table mt-4 px-2">
+        <div class="members-table mt-4 ">
           <table class="table align-middle mb-5   ">
             <thead class="bg-light ">
               <tr>
