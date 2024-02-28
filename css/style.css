@@ -32,6 +32,10 @@ body {
     background-color: #F7F8F9 !important;
     /* background-color: rgb(252, 253, 254) */
 }
+.mybg-secondary2{
+    background-color: #dde1e62c !important;
+    
+}
 .mybg-dark{
     background-color: #6686A2 !important;
 }
