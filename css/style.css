@@ -965,9 +965,12 @@ button{
 .org-control-input{
     height: 40px;
 }
-
-
-
+.select-project{
+    width: 100% !important;
+}
+.form-select{
+   padding: 10px !important;
+}
 /* Cross Hover */
 
 .cross-hover{
@@ -1089,6 +1092,7 @@ Switch Btn for Control header-->
     font-weight: 500;
     color: rgb(61, 77, 105);
     text-wrap: nowrap;
+    cursor: pointer;
 }
 
 .switch-active{
@@ -1102,6 +1106,14 @@ Switch Btn for Control header-->
 }
 
 
+.modal-content{
+    background: rgba(255, 255, 255, 0.685) !important;
+box-shadow: 0 8px 32px 0 rgba(77, 77, 78, 0.37) !important;
+backdrop-filter: blur( 6.5px ) !important;
+-webkit-backdrop-filter: blur( 6.5px ) !important;
+border-radius: 10px !important;
+border: 1px solid rgba( 255, 255, 255, 0.18 ) !important;  
+}
 /* Media Query */
 
 @media only screen and (max-width: 600px) {

@@ -28,7 +28,7 @@ $(document).ready(function () {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const currentUrl = window.location.href;
   const navLinks = document.querySelectorAll(".nav-link");
 
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // // Collaspe SideBar
-       
+
 //         document.addEventListener("DOMContentLoaded", function () {
 //             var sidebar = document.querySelector('.sidebar');
 //             var mainpage = document.querySelector('.main-content');
@@ -52,8 +52,11 @@ document.addEventListener("DOMContentLoaded", function() {
 //                 mainpage.classList.toggle('collasped-mainpage');
 //             });
 //         });
-    
-    
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   var sidebar = document.querySelector('.sidebar');
   var mainpage = document.querySelector('.main-content');
@@ -61,10 +64,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to check screen size and collapse sidebar if below 600 pixels
   function checkScreenSize() {
-      if (window.innerWidth < 600) {
-          sidebar.classList.add('collapsed-sidebar');
-          mainpage.classList.add('collasped-mainpage');
-      }
+    if (window.innerWidth < 600) {
+      sidebar.classList.add('collapsed-sidebar');
+      mainpage.classList.add('collasped-mainpage');
+    }
   }
 
   // Initial check when DOM is loaded
@@ -72,13 +75,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Toggle sidebar collapse on arrow click
   sidebarArrow.addEventListener('click', function () {
-      sidebar.classList.toggle('collapsed-sidebar');
-      mainpage.classList.toggle('collasped-mainpage');
+    sidebar.classList.toggle('collapsed-sidebar');
+    mainpage.classList.toggle('collasped-mainpage');
   });
 
   // Listen for window resize events and update sidebar accordingly
   window.addEventListener('resize', function () {
-      checkScreenSize();
+    checkScreenSize();
   });
 });
 
@@ -117,6 +120,25 @@ currentDateDiv.textContent = formattedCurrentDate;
 
 
 
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const switchBtns = document.querySelectorAll('.switch-btn');
+
+  switchBtns.forEach(btn => {
+      btn.addEventListener('click', function () {
+          // Remove switch-active class from all buttons
+          switchBtns.forEach(btn => {
+              btn.classList.remove('switch-active');
+          });
+
+          // Add switch-active class to the clicked button
+          this.classList.add('switch-active');
+      });
+  });
+});
 
 /*
 
@@ -179,7 +201,7 @@ currentDateDiv.textContent = formattedCurrentDate;
 //       }
 //   }
 // });
-  
+
 
 document.addEventListener("DOMContentLoaded", function () {
   // Define the radio button groups and their corresponding div containers
