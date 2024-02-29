@@ -949,7 +949,7 @@ button{
 }
 
 .org-form-input{
-   font-size: 13.5px !important;
+   font-size: 12.5px !important;
    font-weight: 500 !important;
    /* padding: 5px 20px !important; */
    /* color: #61E5AC !important; */
@@ -965,7 +965,7 @@ button{
 
 .add-org-form-input{
     width:100% !important; 
-    height: 40px !important;
+    height: 35px !important;
 }
 .org-control-input{
     height: 40px;
@@ -1118,6 +1118,13 @@ backdrop-filter: blur( 6.5px ) !important;
 -webkit-backdrop-filter: blur( 6.5px ) !important;
 border-radius: 10px !important;
 border: 1px solid rgba( 255, 255, 255, 0.18 ) !important;  
+}
+
+
+.differ{
+    border:2.3px solid #ecececda;
+    /* border-top: none; */
+    border-radius: 5px;
 }
 /* Media Query */
 
