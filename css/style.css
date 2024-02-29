@@ -1101,9 +1101,12 @@ Switch Btn for Control header-->
     text-wrap: nowrap;
     cursor: pointer;
 }
+.switch-btn:hover{
+    border: 1px solid var(--green-color);
+}
 
 .switch-active{
-    background-color: var(--green-color);
+    background-color: var(--green-color)  ;
     color: white;
     font-weight: 500;
 }
