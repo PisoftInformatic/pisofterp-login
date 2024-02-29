@@ -118,7 +118,7 @@ body {
   }
 
   .profile-container {
-    position: fixed;
+    position: fixed !important;
     bottom: 10px !important;
     bottom: 1% !important;
     padding-top: 10px;
@@ -954,6 +954,7 @@ button{
    /* padding: 5px 20px !important; */
    /* color: #61E5AC !important; */
 }
+
 .org-form-input:hover{
     border: #3db883b6 1px solid;
     box-shadow: #61e5ac48 1px 1px 10px ;
@@ -962,6 +963,7 @@ button{
     border: #3db883b6 1px solid !important;
     box-shadow: #61e5ac8a 1px 1px 10px !important ;
 }
+
 
 .add-org-form-input{
     width:100% !important; 
@@ -974,7 +976,7 @@ button{
     width: 100% !important;
 }
 .form-select{
-   padding: 10px !important;
+   padding: 6px 10px !important;
 }
 /* Cross Hover */
 
@@ -1162,7 +1164,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 ) !important;
     .bs-dc {
         width: 100% !important;
     }
-    .row > div{
+    .inner-mt15 > div{
         margin-top: 15px !important;
     }
     .timesheet-container{

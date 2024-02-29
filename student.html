@@ -27,8 +27,8 @@
             <div class="navnav">
                 <!-- logo of the Sidebar -->
                 <a href="dashv2.html"
-                    class=" logo-div d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-                    <span class="fs-4 heading px-3">
+                    class=" logo-div d-flex  align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                    <span class="fs-4 heading px-2">
                         <img src="./img/logo.png" alt="" width="170">
                     </span>
                 </a>
@@ -182,7 +182,7 @@
                 </div>
 
 
-                <div class="dropdown position-absolute profile-container  bg-white">
+                <div class="dropdown profile-container  bg-white">
                     <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
                         id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="https://avatars.githubusercontent.com/u/67789838?v=4" alt="" width="32" height="32"
@@ -206,20 +206,22 @@
             <div class="alert-box   text-center">
                 Welcome to New <span style="padding-right: 5px;padding-left: 5px;">ERP</span> Portal
             </div>
-            <!-- Main Page Data  -->
-            <div class="d-flex page-header mx-3 justify-content-between align-items-center">
-                <h3 class="page-heading">
-                    Student Managment
-                </h3>
-                <p class="header-date m-0 " id="current-date"></p>
-            </div>
+
+
             <div class="container-fluid px-2">
-                <div class="row p-0 m-0 justify-content-between">
-                    <div class="control-tab col-md-6">
+                <div class="d-flex flex-wrap gap-2 page-header px-2 justify-content-between align-items-center">
+                    <h3 class="page-heading">
+                        Student Registration
+                    </h3>
+                    <p class="header-date m-0 " id="current-date"></p>
+                </div>
+
+                <!-- Page Control Header -->
+                <div class="row inner-mt15 p-0 m-0 justify-content-between align-items-center">
+                    <div class="control-tab col-md-6 col-sm-12">
                         <div class="row">
-                           
-                            <div class="search-box col-md-7 col-sm-2">
-                                <div class="d-flex  flex-column mx-2">
+                            <div class="search-box col-md-7 col-sm-6">
+                                <div class="d-flex  flex-column ">
                                     <div class="mini-head pt-0">
                                         Search Student
                                     </div>
@@ -231,10 +233,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="invite-btn col-md-3 d-flex justify-content-end mx-2 align-items-center ">
-                        <a href="./add-student.html" class="bg-green py-2 mb-0  px-3 invite-mmbr-btn"><span><i
-                                    class="ri-add-line"></i></span> Add Student</a>
+                    <div class="col-md-6 ">
+                        <div class="d-flex justify-content-end mx-2 align-items-center ">
+                            <div class="invite-btn ">
+                                <a href="./add-student.html" class="bg-green py-2 mb-0  px-3 invite-mmbr-btn"><span><i
+                                            class="ri-add-line"></i></span> Add Student</a>
+                            </div>
+                        </div>
+
                     </div>
+
                 </div>
 
                 <!-- table Section -->

@@ -182,7 +182,7 @@
                 </div>
 
 
-                <div class="dropdown position-absolute profile-container  bg-white">
+                <div class="dropdown profile-container  bg-white">
                     <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
                         id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="https://avatars.githubusercontent.com/u/67789838?v=4" alt="" width="32" height="32"
@@ -228,22 +228,20 @@
                         Details of Employee
                     </div>
                     <form method="get">
-                        <div class="row my-3">
-                            <div class="col-md-3">
-                                <div class="img-upload d-flex flex-column gap-4">
-                                    <img src="./img/user-avatar.png" class="form-control img-fluid"
-                                        style="height: 150px; width: 150px;" alt="">
-                                    <input type="file" name="profile-avatar" id="profile-avatar"
-                                        style="font-size: 12px;">
+                        <div class="row my-3 differ">
+                            <div class="col-md-12  mybg-secondary py-3">
+                                <div class="head ">
+                                    Employee Details Related to Job
                                 </div>
                             </div>
-                            <div class="col-md-6 ">
+
+                            <div class="col-md-8 order-md-1 order-2">
                                 <div class="row justify-content-between">
                                     <div class="col-md-6">
                                         <div class="d-flex flex-column">
                                             <label for="branches" class="org-form-label my-2 ">Branches</label>
                                             <select name="branches" id="branches"
-                                                class="form-control org-form-input add-org-form-input">
+                                                class="form-select org-form-input add-org-form-input">
                                                 <option value="">Head Office</option>
                                                 <option value="">Patalia</option>
                                                 <option value="">Mohali</option>
@@ -252,11 +250,12 @@
                                             </select>
                                         </div>
                                     </div>
+
                                     <div class="col-md-6">
                                         <div class="d-flex flex-column">
                                             <label for="department" class="org-form-label my-2 ">Department</label>
                                             <select name="department" id="department"
-                                                class="form-control org-form-input add-org-form-input">
+                                                class="form-select org-form-input add-org-form-input">
                                                 <option value="">Cashier</option>
                                                 <option value="">Accounts</option>
                                                 <option value="">Human Resource</option>
@@ -269,7 +268,7 @@
                                         <div class="d-flex flex-column">
                                             <label for="designation" class="org-form-label my-2 ">Designation</label>
                                             <select name="designation" id="designation"
-                                                class="form-control org-form-input add-org-form-input">
+                                                class="form-select org-form-input add-org-form-input">
                                                 <option value="">Select Designation</option>
 
                                             </select>
@@ -280,7 +279,7 @@
                                             <label for="employee-type" class="org-form-label my-2 ">Employee
                                                 Type</label>
                                             <select name="employee-type" id="employee-type"
-                                                class="form-control org-form-input add-org-form-input">
+                                                class="form-select org-form-input add-org-form-input">
                                                 <option value="full-time-employee"> Employee - Full Time</option>
                                                 <option value="part-time-employee">Emlpoyee -Part Time </option>
                                                 <option value="human-resource">Human Resource</option>
@@ -289,7 +288,8 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+
+                                    <div class="col-md-6 col-sm-4">
                                         <div class="d-flex flex-column">
                                             <label for="addmission-date" class="org-form-label my-2 ">Joining
                                                 Date</label>
@@ -297,48 +297,72 @@
                                                 class="form-control org-form-input add-org-form-input">
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="d-flex flex-column">
-                                            <label for="branches" class="org-form-label my-2 ">Branches</label>
-                                            <select name="branches" id="branches"
-                                                class="form-control org-form-input add-org-form-input">
-                                                <option value="head office">Head Office</option>
-                                                <option value="patalia">Patalia</option>
-                                                <option value="mohali">Mohali</option>
-                                                <option value="mroinda">Morinda</option>
-                                                <option value="no branches">No Branch</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-4 mt-3 order-md-2 order-1 p-3 ">
+                                <div class="img-upload mybdr-secondary d-flex flex-column gap-2 p-2 justify-content-between align-items-center  "
+                                    style="border-radius: 7px;">
+                                    <img src="./img/user-avatar.png" class="form-control img-fluid"
+                                        style="height: 120px; width: 125px;" alt="">
+                                    <input type="file" name="profile-avatar" id="profile-avatar"
+                                        style="font-size: 12px;" class="form-control org-form-input">
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row gap-2 mybg-secondary py-3 ">
-                            <div class="col-md-3">
+                        
+                        <div class="row pb-3 differ  ">
+                            <div class="col-md-12 mybg-secondary">
+                                <div class="head py-3 ">
+                                    Employee Personal Details
+                                </div>
+                            </div>
+                            <div class="col-md-4">
                                 <div class="d-flex flex-column">
                                     <label for="name" class="org-form-label my-2 ">Employee Name</label>
                                     <input type="text" class="form-control org-form-input add-org-form-input"
                                         name="name" id="name">
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <!-- <div class="col-md-4">
+                                <div class="d-flex flex-column">
+                                    <label for="mname" class="org-form-label my-2 ">Middle Name</label>
+                                    <input type="text" class="form-control org-form-input add-org-form-input"
+                                        name="mname" id="mname">
+                                </div>
+                            </div> -->
+                            <div class="col-md-4">
                                 <div class="d-flex flex-column">
                                     <label for="father-name" class="org-form-label my-2 ">Father's Name</label>
                                     <input type="text" class="form-control org-form-input add-org-form-input"
                                         name="father-name" id="father-name">
                                 </div>
                             </div>
-
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="d-flex flex-column">
                                     <label for="mother-name" class="org-form-label my-2 ">Mother's Name</label>
                                     <input type="text" class="form-control org-form-input add-org-form-input"
                                         name="mother-name" id="mother-name">
                                 </div>
                             </div>
-
-                            <div class="col-md-3">
+                            
+                           
+                            <div class="col-md-4">
+                                <div class="d-flex flex-column">
+                                    <label for="mobile" class="org-form-label my-2 ">Mobile Number</label>
+                                    <input type="text" class="form-control org-form-input add-org-form-input"
+                                        name="mobile" id="mobile">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="d-flex flex-column">
+                                    <label for="email" class="org-form-label my-2 ">Email</label>
+                                    <input type="email" class="form-control org-form-input add-org-form-input"
+                                        name="email" id="email">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
                                 <div class="d-flex flex-column">
                                     <label for="gender" class="org-form-label my-2 ">Gender</label>
                                     <select name="gender" class="form-control org-form-input add-org-form-input"
@@ -348,99 +372,91 @@
                                     </select>
                                 </div>
                             </div>
-
-                            <div class="col-md-3">
-                                <div class="d-flex flex-column">
-                                    <label for="email" class="org-form-label my-2 ">Email</label>
-                                    <input type="email" class="form-control org-form-input add-org-form-input"
-                                        name="email" id="email">
-                                </div>
-                            </div>
-
-                            <div class="col-md-3">
+                            
+                            <div class="col-md-4">
                                 <div class="d-flex flex-column">
                                     <label for="dob" class="org-form-label my-2 ">Date of Birth</label>
                                     <input type="date" name="dob" id="dob"
                                         class="form-control org-form-input add-org-form-input">
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="d-flex flex-column">
                                     <label for="dob" class="org-form-label my-2 ">Blood Group</label>
                                     <select name="blood-group" id="blood-group"
                                         class="form-control org-form-input add-org-form-input">
-                                        <option value="">A+</option>
-                                        <option value="">A-</option>
-                                        <option value="">B+</option>
-                                        <option value="">B-</option>
-                                        <option value="">AB-</option>
-                                        <option value="">O-</option>
-                                        <option value="">O+</option>
+                                        <option value="a+">A+</option>
+                                        <option value="a-">A-</option>
+                                        <option value="b+">B+</option>
+                                        <option value="b-">B-</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="d-flex flex-column">
                                     <label for="nation" class="org-form-label my-2 ">Nationality</label>
                                     <select name="nation" id="nation"
-                                        class="form-control org-form-input add-org-form-input">
-                                        <option value="">Canadian</option>
-                                        <option value="">Indian</option>
-                                        <option value="">American</option>
+                                        class="form-select org-form-input add-org-form-input">
+                                        <option value="Canadian">Canadian</option>
+                                        <option value="Indian">Indian</option>
+                                        <option value="American">American</option>
+                                        <option value="Pakastani">Pakastani</option>
+                                        
                                     </select>
                                 </div>
                             </div>
 
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="d-flex flex-column">
                                     <label for="category" class="org-form-label my-2 ">Category</label>
                                     <select name="category" id="category"
-                                        class="form-control org-form-input add-org-form-input">
-                                        <option value="">General</option>
-                                        <option value="">SC</option>
-                                        <option value="">ST</option>
-                                        <option value="">OBC</option>
-                                        <option value="">EWS</option>
+                                        class="form-select org-form-input add-org-form-input">
+                                        <option value="General">General</option>
+                                        <option value="SC">SC</option>
+                                        <option value="ST">ST</option>
+                                        <option value="OBC">OBC</option>
+                                        <option value="EWS">EWS</option>
                                     </select>
                                 </div>
-                            </div>
-
-                            <div class="col-md-3">
+                            </div>  
+                            <div class="col-md-4">
                                 <div class="d-flex flex-column">
                                     <label for="salary" class="org-form-label my-2 ">Salary</label>
-                                    <input type="text" name="salary" id="salary"
-                                        class="form-control org-form-input add-org-form-input"> </input>
+                                    <input type="text" name="salary" id="salary" placeholder="In Digits only"
+                                        class="form-control  org-form-input add-org-form-input"> </input>
                                 </div>
                             </div>
 
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="d-flex flex-column">
                                     <label for="category" class="org-form-label my-2 ">Marital Status</label>
                                     <select name="category" id="category"
-                                        class="form-control org-form-input add-org-form-input">
-                                        <option value="">Un-Married</option>
-                                        <option value="">Married</option>
+                                        class="form-select org-form-input add-org-form-input">
+                                        <option value="Un-Married">Un-Married</option>
+                                        <option value="Married">Married</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+
+                            <div class="col-md-4">
                                 <div class="d-flex flex-column">
                                     <label for="senior" class="org-form-label my-2 ">Senior (Report To)</label>
                                     <select name="senior" id="senior"
-                                        class="form-control org-form-input add-org-form-input">
-                                        <option value="">Anju Mam</option>
-                                        <option value="">Mohit Sir</option>
-                                        <option value="">Jyot Mam</option>
+                                        class="form-select org-form-input add-org-form-input">
+                                        <option value="anju-mam">Anju Mam</option>
+                                        <option value="mohit-sir">Mohit Sir</option>
+                                        <option value="jyoti-mam">Jyot Mam</option>
                                     </select>
                                 </div>
                             </div>
+                          
                         </div>
-                        <hr>
 
+                    
                         <!-- Section 2 -->
                         <div class="row my-4 gap-4">
 
-
+                            <!-- Radio Button Container Start -->
                             <div class="col-md-9">
                                 <div class="row">
                                     <!-- Bottom Left -->
@@ -576,13 +592,14 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Radio Button Container Start -->
 
 
-                            <div class="col-md-9">
+                            <div class="col-md-12">
                                 <!-- Add Spouse Details Container -->
-                                <div class="row " id="add-spouse-cont" style="border-radius: 7px;">
-                                    <div class="col-md-12">
-                                        <div class="head fs-18 py-3 ">
+                                <div class="row differ pb-3 my-3" id="add-spouse-cont" style="border-radius: 7px;">
+                                    <div class="col-md-12 mybg-secondary">
+                                        <div class="head py-3 ">
                                             Add Spouse Details
                                         </div>
                                     </div>
@@ -629,10 +646,10 @@
                                 </div>
 
                                 <!-- Add Education Details Container -->
-                                <div class="row " id="add-edcuation-cont" style="border-radius: 7px;">
-                                    <div class="col-md-12">
-                                        <div class="head fs-18 py-3 ">
-                                            Add Education Details
+                                <div class="row differ pb-3 my-3" id="add-edcuation-cont" style="border-radius: 7px;">
+                                    <div class="col-md-12 mybg-secondary">
+                                        <div class="head py-3 ">
+                                            Add Educational Details
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -652,7 +669,6 @@
                                                 class="form-control org-form-input add-org-form-input"> </input>
                                         </div>
                                     </div>
-
 
                                     <div class="col-md-4">
                                         <div class="d-flex flex-column">
@@ -693,9 +709,9 @@
                                 </div>
 
                                 <!-- Add Address Details Container -->
-                                <div class="row " id="add-address-cont" style="border-radius: 7px;">
-                                    <div class="col-md-12">
-                                        <div class="head fs-18 py-3 ">
+                                <div class="row differ pb-3 my-3" id="add-address-cont" style="border-radius: 7px;">
+                                    <div class="col-md-12 mybg-secondary">
+                                        <div class="head py-3 ">
                                             Add Address Details
                                         </div>
                                     </div>
@@ -779,9 +795,9 @@
                                 </div>
 
                                 <!-- Add Children Details Container -->
-                                <div class="row " id="add-children-cont" style="border-radius: 7px;">
-                                    <div class="col-md-12">
-                                        <div class="head fs-18 py-3 ">
+                                <div class="row differ pb-3 my-3" id="add-children-cont" style="border-radius: 7px;">
+                                    <div class="col-md-12 mybg-secondary">
+                                        <div class="head py-3 ">
                                             Add Children Details
                                         </div>
                                     </div>
@@ -828,9 +844,9 @@
                                 </div>
 
                                 <!-- Add Experience Details Container -->
-                                <div class="row " id="add-experience-cont" style="border-radius: 7px;">
-                                    <div class="col-md-12">
-                                        <div class="head fs-18 py-3 ">
+                                <div class="row differ pb-3 my-3" id="add-experience-cont" style="border-radius: 7px;">
+                                    <div class="col-md-12 mybg-secondary">
+                                        <div class="head py-3 ">
                                             Add Experience Details
                                         </div>
                                     </div>
@@ -889,10 +905,10 @@
                                 </div>
 
                                 <!-- Add Documents Details Container -->
-                                <div class="row " id="add-document-cont" style="border-radius: 7px;">
-                                    <div class="col-md-12">
-                                        <div class="head fs-18 py-3 ">
-                                            Add Documents Details
+                                <div class="row differ pb-3" id="add-document-cont" style="border-radius: 7px;">
+                                    <div class="col-md-12 mybg-secondary">
+                                        <div class="head py-3 ">
+                                            Add Document Details
                                         </div>
                                     </div>
                                     <div class="col-md-4">
