@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- <link rel="stylesheet" href="./login.css"> -->
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <!-- Remix Icon CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- Jquery  -->          
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<style>
+  .input-control{
+    background-color: rgba(255, 255, 255, 0.568) !important;
+  }
+</style>
+
+<body>
+  <main class="d-flex">
+    <!-- Sidebar -->
+    <div class="sidebar  px-3 py-0">
+      <!-- Arrow -->
+      <div class="sidebar-arrow">
+        <i class="ri-menu-line"></i>
+      </div>
+      <div class="navnav">
+
+        <!-- logo of the Sidebar -->
+        <a href="dashv2.html"
+          class=" logo-div d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+          <span class="fs-4 heading px-3">
+            <img src="./img/logo.png" alt="" width="170">
+          </span>
+        </a>
+        <div class="nav-content">
+          <!-- Categories -->
+          <div class="category">
+            <div class="sub-heading">
+              <h6 class="mb-2">Manage</h6>
+            </div>
+            <ul class=" mt-0 nav nav-pills flex-column mb-auto">
+              <li class="">
+                <a href="./dashv2.html" class="nav-link link-dark sidebar-li">
+                  <i class="ri-dashboard-line px-0" style="font-size: 20px;"></i>
+                  <span>Dashboard</span>
+                </a>
+              </li>
+
+              <li class="">
+                <a href="./organization.html" class="nav-link link-dark sidebar-li">
+                  <i class="ri-organization-chart " style="font-size: 20px;"></i>
+                  <span>Organization</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="./members.html" class="nav-link link-dark">
+                  <i class="ri-user-line " style="font-size: 20px;"></i>
+                  <span>Members</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="./student.html" class="nav-link link-dark">
+                  <i class="ri-admin-line " style="font-size: 20px;"></i>
+                  <span>Student Managment</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Categories -->
+          <div class="category">
+            <div class="sub-heading">
+              <h6 class="mb-2">Manage</h6>
+            </div>
+            <ul class=" mt-0 nav nav-pills flex-column mb-auto">
+              <li class="collapsible">
+                <a href="#" class="nav-link link-dark sidebar-li">
+                  <i class="ri-dashboard-line px-0" style="font-size: 20px;"></i>
+                  <span>Dashboard</span>
+                </a>
+              </li>
+              <li class="collapsible d-flex flex-column  align-items-start">
+                <a href="#" class="nav-link link-dark sidebar-li ">
+                  <i class="ri-organization-chart " style="font-size: 20px;"></i>
+                  <span>Organization <span class="sidebar-coll-arrow"><i
+                        class="ri-arrow-right-s-line"></i></span></span>
+                </a>
+                <ul class="sub-menu  px-0 m-0 nav-pills" style="list-style: none;">
+                  <li class="collapsible d-flex flex-column "><a href="#1"
+                      class="nav-link link-dark sidebar-li">Employess <span class="sidebar-coll-arrow"><i
+                          class="ri-arrow-right-s-line"></i></span></a>
+                    <ul class="sub-menu px-0 m-0 nav-pills" style="list-style: none;">
+                      <li class="collapsible d-flex flex-column "><a href="#11"
+                          class="nav-link link-dark sidebar-li">Add Employees <span class="sidebar-coll-arrow"><i
+                              class="ri-arrow-right-s-line"></i></span></a>
+                        <ul class="sub-menu  px-0 m-0 nav-pills" style="list-style: none;">
+                          <li class="collapsible d-flex flex-column "><a href="#1"
+                              class="nav-link link-dark sidebar-li">Departments <span class="sidebar-coll-arrow"><i
+                                  class="ri-arrow-right-s-line"></i></span></a>
+                            <ul class="sub-menu px-0 m-0 nav-pills" style="list-style: none;">
+                              <li class=""><a href="./organization.html"
+                                  class="nav-link link-dark sidebar-li text-nowrap">Software
+                                  Developer</a>
+                              </li>
+                              <li class=""><a href="#21" class="nav-link link-dark side   bar-li">Java
+                                  Developer</a>
+                              </li>
+                              <li class=""><a href="#31" class="nav-link link-dark sidebar-li">Python
+                                  Developer</a>
+                              </li>
+
+                            </ul>
+                          </li>
+                          <li class=""><a href="#2" class="nav-link link-dark sidebar-li">Payments</a>
+                          </li>
+                          <li class=""><a href="#3" class="nav-link link-dark sidebar-li">Departments</a></li>
+
+                        </ul>
+                      </li>
+                      <li class=""><a href="#21" class="nav-link link-dark sidebar-li">View
+                          Employees</a>
+                      </li>
+                      <li class=""><a href="#31" class="nav-link link-dark sidebar-li">ID Card</a>
+                      </li>
+
+                    </ul>
+                  </li>
+                  <li class=""><a href="#2" class="nav-link link-dark sidebar-li">Payments</a></li>
+                  <li class=""><a href="#3" class="nav-link link-dark sidebar-li">Departments</a></li>
+
+                </ul>
+              </li>
+
+
+              <!-- Add more list items here -->
+            </ul>
+          </div>
+          <div class="category">
+            <div class="sub-heading">
+              <h6 class="mb-2">Admin</h6>
+            </div>
+            <ul class=" mt-0 nav nav-pills flex-column mb-auto">
+              <li>
+                <a href="./employee.html" class="nav-link link-dark">
+                  <i class="ri-team-line"></i>
+                  <span>Employees</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="nav-link link-dark">
+                  <i class="ri-folders-line"></i>
+                  <span>Projects</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="nav-link link-dark">
+                  <i class="ri-file-chart-line"></i>
+                  <span>Reports</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link link-dark">
+                  <i class="ri-settings-2-line"></i>
+                  <span>Settings</span>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+          <!-- Categories End -->
+        </div>
+
+
+        <div class="dropdown profile-container  bg-white">
+          <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+            id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://avatars.githubusercontent.com/u/67789838?v=4" alt="" width="32" height="32"
+              class="rounded-circle me-2">
+            <span>Profile</span>
+          </a>
+          <ul class="dropdown-menu profile-menu text-small shadow fade" aria-labelledby="dropdownUser2">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="./login.html">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content  p-0">
+      <div class="alert-box text-center">
+        Welcome to New <span style="padding-right: 5px;padding-left: 5px;">ERP</span> Portal
+      </div>
+      <!-- Main Page Data  -->
+      <div class="container-fluid px-3">
+        <div class="d-flex gap-2 flex-wrap page-header justify-content-between  align-items-center">
+          <h3 class="page-heading">
+            Organizations
+          </h3>
+          <p class="header-date m-0 " id="current-date"></p>
+        </div>
+        <!-- <div class="row justify-content-between ">
+          <div class="control-tab col-md-6">
+            <div class="row">
+              <div class="switch-tab-cont col-md-4  mb-0">
+                <div class="d-flex  flex-column">
+                  <div class="mini-head">
+                    Type
+                  </div>
+                  <div class="switch-button mybdr-secondary px-2 py-1 mt-1 justify-content-center  bg-white  d-flex"
+                    style="border-radius: 7px;">
+                    <button type="button" class="switch-btn bg-green px-2 mx-2  py-1 mybdr-secondary"
+                      style="border-radius: 7px ;">Active</button>
+                    <button type="button" class="switch-btn  bg-white  "
+                      style=" border: none;">Archived</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="search-box col-md-7 px-0">
+                <div class="d-flex  flex-column">
+                  <div class="mini-head pt-0    ">
+                    Search Organization
+                  </div>
+                  <div class="switch-button mt-1  d-flex">
+                    <input type="text" class="search mybdr-secondary "
+                      placeholder="Search Organizations By Name" style="width: 100%;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="invite-btn col-md-3 d-flex justify-content-end align-items-center ">
+            <a href="./add-org.html" class="bg-green py-2 mb-0  px-3 invite-mmbr-btn"><span><i
+                  class="ri-add-line"></i></span> Add Organization</a>
+          </div>
+        </div> -->
+
+        <div class="control-container  inner-mt15 row align-items-center justify-content-between">
+          <!-- Left Side Div -->
+          <div class="col-md-6 gap-2 ">
+            <div class="row align-items-end gap-1 ">
+            <div class="col-md-5 col-sm-4" style="max-width: 200px;">
+              <div class="mini-head mb-1">
+                Type
+              </div>
+              <div class="d-flex gap-2 justify-content-center mybdr-secondary bg-white " style="border-radius: 7px; padding: 5px 10px;">
+                <div class="switch-btn  switch-active">
+                 <span class="switch-span"><i class="ri-book-line"></i></span> Active
+                </div>
+                <div class="switch-btn">
+                 <span class="switch-span"><i class="ri-archive-line"></i></span> Archived
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-5">         
+             <div class="d-flex flex-column">
+              <div class="mini-head mb-1">
+                Search Organization
+              </div>
+              <div>
+                <input type="text" class="org-control-input form-control org-form-input" placeholder="Search Org By Name">
+              </div>
+             </div>
+            </div>
+          </div>
+          </div>
+
+          <!-- Right Side Div -->
+          <div class="col-md-3 ">
+            <div class="d-flex justify-content-end">
+              <a href="./add-org.html" class="bg-green py-2 mb-0  px-3 invite-mmbr-btn"><span><i
+                class="ri-add-line"></i></span> Add Organization</a>
+              </div> 
+              </div>
+        </div>
+
+
+        <!-- table Section -->
+        <div class="members-table mt-4 ">
+          <table class="table align-middle mb-5   ">
+            <thead class="bg-light ">
+              <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Code</th>
+                <th>TimeZone</th>
+                <th style="text-wrap: nowrap;">Currency</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <!-- New Org (Make Your Code Dynamic From Here) -->
+              <tr>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 40px; height: 40px"
+                      class="rounded-circle" />
+                    <div class="ms-3 member-name">
+                      Infosys
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="text-sm">
+                    37 Hawthorne, California.
+                  </div>
+                </td>
+                <td>
+                  <div class="assigned-pro text-white mybg-dark py-1">
+                    lZSpkEr
+                  </div>
+                </td>
+                <td>
+                  <div class="d-flex flex-column">
+                    <div class="mmbr-payment">US/Central</div>
+                  </div>
+                </td>
+                <td class="weekly-time-limit">USD</td>
+                <td>
+                  <div class="dropdown">
+                    <a class="btn mybdr-secondary  " href="#" role="button" id="members-actions"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="pr-3 text-left"> Actions</span>
+                      <span class="px-3 text-right" style="font-size: 14px;"> <i
+                          class="ri-arrow-down-s-line"></i></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item" href="#" role="button" data-bs-toggle="modal"
+                          data-bs-target="#edit-org-model">Edit</a></li>
+                      <li><a class="dropdown-item" href="#" role="button" data-bs-toggle="modal"
+                          data-bs-target="#arch-org-model">Archive</a></li>
+                      <li><a class="dropdown-item" role="button" href="#" data-bs-toggle="modal"
+                          data-bs-target="#delete-org-model">Delete</a></li>
+
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- New Org -->
+              <tr>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <img src="https://mdbootstrap.com/img/new/avatars/6.jpg" class="rounded-circle" alt=""
+                      style="width: 40px; height: 40px" />
+                    <div class="ms-3  member-name">
+                      Digital Ocean
+                      <!-- <p class="text-muted mb-0">alex.ray@gmail.com</p> -->
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="text-sm">
+                    123 Main Street, USA
+                  </div>
+                </td>
+                <td>
+                  <div class="assigned-pro text-white mybg-dark py-1">
+                    WqerES
+                  </div>
+                </td>
+                <td>
+                  <div class="d-flex flex-column">
+                    <div class="mmbr-payment">US/Alaska</div>
+
+                  </div>
+                </td>
+                <td class="weekly-time-limit">USD</td>
+                <td>
+                  <div class="dropdown">
+                    <a class="btn mybdr-secondary  " href="#" role="button" id="members-actions"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="pr-3 text-left"> Actions</span>
+                      <span class="px-3 text-right" style="font-size: 14px;"> <i
+                          class="ri-arrow-down-s-line"></i></span>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item" href="#" role="button" data-bs-toggle="modal"
+                          data-bs-target="#edit-org-model">Edit</a></li>
+                      <li><a class="dropdown-item" href="#" role="button" data-bs-toggle="modal"
+                          data-bs-target="#arch-org-model">Archive</a></li>
+                      <li><a class="dropdown-item" role="button" href="#" data-bs-toggle="modal"
+                          data-bs-target="#delete-org-model">Delete</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- New Org -->
+              <tr>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <img src="https://mdbootstrap.com/img/new/avatars/7.jpg" class="rounded-circle" alt=""
+                      style="width: 40px; height: 40px" />
+                    <div class="ms-3  member-name">
+                      VQ Codes
+                      <!-- <p class="text-muted mb-0">kate.hunington@gmail.com</p> -->
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="text-sm">
+                    789 Oak Avenue, Cityville,
+                  </div>
+                </td>
+                <td>
+                  <div class="assigned-pro text-white mybg-dark py-1">
+                    OurgRsT
+                  </div>
+                </td>
+                <td>
+                  <div class="d-flex flex-column">
+                    <div class="mmbr-payment">US/Pacific</div>
+
+                  </div>
+                </td>
+                <td class="weekly-time-limit">USD</td>
+                <td>
+                  <div class="dropdown">
+                    <a class="btn mybdr-secondary  " href="#" role="button" id="members-actions"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="pr-3 text-left"> Actions</span>
+                      <span class="px-3 text-right" style="font-size: 14px;"> <i
+                          class="ri-arrow-down-s-line"></i></span>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item" href="#" role="button" data-bs-toggle="modal"
+                          data-bs-target="#edit-org-model">Edit</a></li>
+
+                      <li><a class="dropdown-item" href="#" role="button" data-bs-toggle="modal"
+                          data-bs-target="#arch-org-model">Archive</a></li>
+
+                      <!-- <li><a class="dropdown-item" href="#">Archive</a></li> -->
+                      <li><a class="dropdown-item" role="button" href="#" data-bs-toggle="modal"
+                          data-bs-target="#delete-org-model">Delete</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+
+          <!-- Modal -->
+          <div class="modal fade" id="delete-org-model" tabindex="-1" aria-labelledby="delete-org-model"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body model-text">
+                  Are you sure you want to remove this member from your organization? All data related to this member
+                  will be deleted.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary model-btn" data-bs-dismiss="modal">Cancel</button>
+                  <button type="submit" class="btn btn-danger  model-btn">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Modal for Archive -->
+          <div class="modal fade" id="arch-org-model" tabindex="-1" aria-labelledby="arch-org-model" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body model-text">
+                  <div class="head fs-18">
+                    Are You Sure
+                  </div>
+                  <div class="fs-15">
+                    Do you really want to archive your organization &quest;
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary model-btn" data-bs-dismiss="modal">Cancel</button>
+                  <button type="submit" class="btn btn-danger  model-btn">Yes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Model for Edit Org -->
+          <div class="modal fade" id="edit-org-model" tabindex="-2" aria-labelledby="edit-org-model" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body model-text">
+                  <div class="head mb-4 fs-18">
+                    Update Organization
+                  </div>
+                  <form method="get">
+                    <div class="row gap-3">
+                      <!-- Organization Name -->
+                      <div class="col-md-12 ">
+                        <div class="d-flex flex-column gap-1 ">
+                          <label for="organization-name" class="text-nowrap org-form-label">Organization Name</label>
+                          <input type="text" class="form-control org-form-input" name="organization-name">
+                        </div>
+                      </div>
+
+                      <!-- Address -->
+                      <div class="col-md-12 ">
+                        <div class="d-flex flex-column gap-1 ">
+                          <label for="address" class="text-nowrap org-form-label">Address</label>
+                          <input type="text" class="form-control org-form-input" name="address" id="address">
+                        </div>
+                      </div>
+
+                      <!-- Phone -->
+                      <div class="col-md-12 ">
+                        <div class="d-flex flex-column gap-1 ">
+                          <label for="phone" class="text-nowrap org-form-label">Phone</label>
+                          <input type="text" class="form-control org-form-input" name="phone" id="phone">
+                        </div>
+                      </div>
+
+                      <!-- Organization Type -->
+                      <div class="col-md-12 ">
+                        <div class="d-flex flex-column gap-1 ">
+                          <label for="org-type" class="text-nowrap org-form-label">Organization Type</label>
+                          <select name="org-type" class="form-control org-form-input" id="org-type">
+                            <option value="it&software">IT &amp; Software</option>
+                            <option value="Agency">Agency</option>
+                            <option value="E-Commerce">E-Commerce </option>
+                            <option value="Internet">Internet </option>
+                            <option value="Machine Learning and Big Data">Machine Learning &amp; Big Data </option>
+                            <option value="Medical and Healthcare">Medical &amp; Healthcare </option>
+                            <option value="Food">Food </option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <!-- TimeZones -->
+                      <div class="col-md-12 ">
+                        <div class="d-flex flex-column gap-1 ">
+                          <label for="timezone" class="text-nowrap org-form-label">TimeZones</label>
+                          <select name="timezone" class="form-control org-form-input" id="timezone">
+                            <option value="US/Mountain">US/Mountain</option>
+                            <option value="US/Central">US/Central</option>
+                            <option value="US/Eastern">US/Eastern</option>
+                            <option value="US/Alaska">US/Alaska</option>
+                            <option value="US/Hawaii">US/Hawaii</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <!-- Currency -->
+                      <div class="col-md-12 ">
+                        <div class="d-flex flex-column gap-1 ">
+                          <label for="currency" class="text-nowrap org-form-label">Currency</label>
+                          <select name="currency" class="form-control org-form-input" id="currency">
+                            <option value="USD">USD - US Dollar</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="GBP">GBP - British Pound</option>
+                            <option value="CAD">CAD - Canadian Dollar</option>
+                            <option value="INR">INR - Indian Rupee</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="modal-footer mt-4 d-flex  justify-content-end gap-4">
+                        <button type="button" class="btn btn-secondary model-btn"
+                          data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn px-3 btn-success model-btn">Update</button>
+                      </div>
+                    </div>
+
+                  </form>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+  <!-- Graph Js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <!-- Custom Js Files  -->
+  <script src="./js/custom_js.js"></script>
+
+
+
+</body>
+
+</html>
