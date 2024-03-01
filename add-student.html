@@ -308,15 +308,19 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 mt-3 order-md-2 order-1 p-3 ">
-                                        <div class="img-upload mybdr-secondary d-flex flex-column gap-2 p-2 justify-content-between align-items-center  "
-                                            style="border-radius: 7px;">
-                                            <img src="./img/user-avatar.png" class="form-control img-fluid"
-                                                style="height: 120px; width: 125px;" alt="">
-                                            <input type="file" name="profile-avatar" id="profile-avatar"
-                                                style="font-size: 12px;" class="form-control org-form-input">
+                                 
+                                    <div class="col-md-4 mt-3 order-md-2 order-1 p-3">
+                                        <p class="ImgErrorMessage" style="color: red; display: none;" class="p-0 m-0 fs-12 text-center">Please select a valid image file.</p>
+                                        <div class="img-upload mybdr-secondary d-flex flex-column gap-2 p-2 justify-content-between align-items-center" style="border-radius: 7px;">
+                                            <label for="student-profile-input">
+                                                <span>
+                                                    <img src="./img/user-avatar.png" class="form-control img-fluid replace-img-to" style="height: 120px; width: 125px;" id="student-profile-img" name="student-profile-img" alt="">
+                                                </span>
+                                            </label>
+                                            <input type="file" name="student-profile-input" id="student-profile-input" style="font-size: 12px;" class="form-control org-form-input replace-img-from" accept="image/*">
                                         </div>
                                     </div>
+                                
                                 </div>
 
 
@@ -628,6 +632,39 @@
             window.history.back();
         }
     </script>
+
+<script>
+    // Get references to the input and img elements
+    const imageInputs = document.querySelectorAll('.replace-img-from');
+    const previewImages = document.querySelectorAll('.replace-img-to');
+    const errorMessages = document.querySelectorAll('.ImgErrorMessage');
+
+    // Add event listener to each input element
+    imageInputs.forEach((input, index) => {
+        input.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const previewImage = previewImages[index];
+            const errorMessage = errorMessages[index];
+
+            if (file) {
+                if (file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        previewImage.src = e.target.result;
+                        errorMessage.style.display = 'none';
+                    };
+
+                    reader.readAsDataURL(file);
+                } else {
+                    errorMessage.style.display = 'block';
+                    previewImage.src = '';
+                }
+            }
+        });
+    });
+</script>
+
 
     <script type="text/javascript">
         const checkbox = document.getElementById("same-address-checkbox");
