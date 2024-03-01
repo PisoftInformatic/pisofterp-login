@@ -300,13 +300,17 @@
                                     
                                 </div>
                             </div>
-                            <div class="col-md-4 mt-3 order-md-2 order-1 p-3 ">
-                                <div class="img-upload mybdr-secondary d-flex flex-column gap-2 p-2 justify-content-between align-items-center  "
-                                    style="border-radius: 7px;">
-                                    <img src="./img/user-avatar.png" class="form-control img-fluid"
-                                        style="height: 120px; width: 125px;" alt="">
-                                    <input type="file" name="profile-avatar" id="profile-avatar"
-                                        style="font-size: 12px;" class="form-control org-form-input">
+                          
+
+                            <div class="col-md-4 mt-3 order-md-2 order-1 p-3">
+                                <p class="ImgErrorMessage" style="color: red; display: none;" class="p-0 m-0 fs-12 text-center">Please select a valid image file.</p>
+                                <div class="img-upload mybdr-secondary d-flex flex-column gap-2 p-2 justify-content-between align-items-center" style="border-radius: 7px;">
+                                    <label for="employee-profile-input">
+                                        <span>
+                                            <img src="./img/user-avatar.png" class="form-control img-fluid replace-img-to" style="height: 120px; width: 125px;" id="student-profile-img" name="student-profile-img" alt="">
+                                        </span>
+                                    </label>
+                                    <input type="file" name="employee-profile-input" id="employee-profile-input" style="font-size: 12px;" class="form-control org-form-input replace-img-from" accept="image/*">
                                 </div>
                             </div>
                         </div>

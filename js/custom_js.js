@@ -140,69 +140,42 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
 /*
+            ************    Replacing Image with Input Image     ************
+*/ 
 
-+++++++++++       Add Employee Radio Buttons      +++++++++++++
+ // Get references to the input and img elements
+ const imageInputs = document.querySelectorAll('.replace-img-from');
+ const previewImages = document.querySelectorAll('.replace-img-to');
+ const errorMessages = document.querySelectorAll('.ImgErrorMessage');
 
-*/
+ // Add event listener to each input element
+ imageInputs.forEach((input, index) => {
+     input.addEventListener('change', function(event) {
+         const file = event.target.files[0];
+         const previewImage = previewImages[index];
+         const errorMessage = errorMessages[index];
 
-// // Add Spouse Details
-// document.addEventListener("DOMContentLoaded", function () {
-//   var selectedValue = document.querySelectorAll('input[name="add-spouse"]');
-//   var addSpouse = document.getElementById('add-spouse-cont');
-//   console.log("Selected Value: " + selectedValue);
+         if (file) {
+             if (file.type.startsWith('image/')) {
+                 const reader = new FileReader();
 
+                 reader.onload = function(e) {
+                     previewImage.src = e.target.result;
+                     errorMessage.style.display = 'none';
+                 };
 
-//   // Initial hide/show based on default selection
-//   toggleDivVisibility();
+                 reader.readAsDataURL(file);
+             } else {
+                 errorMessage.style.display = 'block';
+                 previewImage.src = '';
+             }
+         }
+     });
+ });
 
-//   // Add change event listener to radio buttons
-//   selectedValue.forEach(function (radioButton) {
-//       radioButton.addEventListener('change', function () {
-//           toggleDivVisibility();
-//       });
-//   });
-
-//   function toggleDivVisibility() {
-//       var selectedValue = document.querySelector('input[name="add-spouse"]:checked').value;
-//       if (selectedValue === 'yes') {
-//           addSpouse.style.display = 'flex'; // Show div
-//       } else {
-//           addSpouse.style.display = 'none'; // Hide div
-//       }
-//   }
-// });
-
-
-
-// // Add Education Details
-// document.addEventListener("DOMContentLoaded", function () {
-//   var selectedValueEducation = document.querySelectorAll('input[name="add-education"]');
-//   var addEducation = document.getElementById('add-eduation-cont');
-//   console.log("Selected Value: " + selectedValueEducation);
-
-
-//   // Initial hide/show based on default selection
-//   toggleEducationVisibility();
-
-//   // Add change event listener to radio buttons
-//   selectedValueEducation.forEach(function (radioButton) {
-//       radioButton.addEventListener('change', function () {
-//           toggleEducationVisibility();
-//       });
-//   });
-
-//   function toggleEducationVisibility() {
-//       var selectedValue = document.querySelector('input[name="add-education"]:checked').value;
-//       if (selectedValue === 'yes') {
-//         addEducation.style.display = 'flex'; // Show div
-//       } else {
-//         addEducation.style.display = 'none'; // Hide div
-//       }
-//   }
-// });
-
-
+// +++++++++++       Add Employee Radio Buttons      +++++++++++++
 document.addEventListener("DOMContentLoaded", function () {
   // Define the radio button groups and their corresponding div containers
   var radioGroups = [
