@@ -17,6 +17,14 @@
 
 </head>
 
+<style>
+    .alert-container{
+        position: absolute;
+        right: 0px ;
+        top: 10vh;
+    }
+</style>
+
 <body>
     <main class="d-flex">
         <!-- Sidebar -->
@@ -225,6 +233,17 @@
 
                 <!-- Main Data Container -->
                 <div class="data-container p-3" style="height: auto;">
+                    
+                    <div class="alert-container auto-close" >
+                        <div class="alert alert-success alert-dismissible fade show d-flex justify-content-center align-items-center" role="alert">
+                            <div class="d-flex flex-column ">
+                                <!-- <p class="sub-heading fs-18 text-light m-0">Success !!</p> -->
+                                <p class="fs-14 m-0 text-white">You should check in on some of those fields below.</p>
+                            </div>
+                            <button type="button" class="btn-close fs-12 " data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    </div>
+
                     <div class="d-flex">
                         <div class="head">
                             Member Invitation
@@ -282,6 +301,49 @@
             window.history.back();
         }
     </script>
+
+    
+
+<script>
+    // Get all elements with class "auto-close"
+const autoCloseElements = document.querySelectorAll(".auto-close");
+
+// Define a function to handle the fading and sliding animation
+function fadeAndSlide(element) {
+  const fadeDuration = 500;
+  const slideDuration = 500;
+  
+  // Step 1: Fade out the element
+  let opacity = 1;
+  const fadeInterval = setInterval(function () {
+    if (opacity > 0) {
+      opacity -= 0.1;
+      element.style.opacity = opacity;
+    } else {
+      clearInterval(fadeInterval);
+      // Step 2: Slide up the element
+      let height = element.offsetHeight;
+      const slideInterval = setInterval(function () {
+        if (height > 0) {
+          height -= 10;
+          element.style.height = height + "px";
+        } else {
+          clearInterval(slideInterval);
+          // Step 3: Remove the element from the DOM
+          element.parentNode.removeChild(element);
+        }
+      }, slideDuration / 10);
+    }
+  }, fadeDuration / 10);
+}
+
+// Set a timeout to execute the animation after 5000 milliseconds (5 seconds)
+setTimeout(function () {
+  autoCloseElements.forEach(function (element) {
+    fadeAndSlide(element);
+  });
+}, 3000);
+</script>
 </body>
 
 </html>

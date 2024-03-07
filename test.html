@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+
+body{
+    padding: 50px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box1{
+    color:rgb(15, 122, 122);
+    padding: 50px 100px;
+    border: 2px solid rgba(19, 147, 147, 0.634);
+    border-radius: 10px;
+}
+
+
+
+.si{
+    position: absolute;
+    top: 98px;
+    left: 247px;
+    color: black;
+    display: inline;
+}
+
+
+.co{
+    color: black;
+    display: inline;
+    position: absolute;
+    top: 559px;
+    left: 247px;
+}
+
+.box2{
+    margin-top: 30px;
+    color:rgb(15, 122, 122);
+    padding: 50px 100px;
+    border: 2px solid rgba(19, 147, 147, 0.634);
+    border-radius: 10px;
+}
+
+.box3{
+    margin-top: 30px;
+    color:rgb(15, 122, 122);
+    padding: 50px 100px;
+    border: 2px solid rgba(19, 147, 147, 0.634);
+    border-radius: 10px;
+}
+
+.db{
+    color: black;
+    display: inline;
+    position: absolute;
+    top: 804px;
+    left: 247px;
+}
+
+
+.box4{
+    margin-top: 30px;
+}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form>
+        <div class="box1">
+            <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/info.png" alt="info"/>
+            <h3 class="si">Student's Info</h3>
+            <hr>
+            <div class="row mb-3">
+                <label for="studentId" id="studentId-label" class="col-form-label col-md-3">Student ID :</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" id="studentId" pattern="[a-zA-Z]{3}\.[0-9]{3}\.[0-9]{1,4}" required>
+                </div>
+            </div>
+            
+            <div class="row mb-3">
+                <label for="firstName" id="firstName-label" class="col-form-label col-md-3">Firstname :</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" id="firstName" pattern="[a-zA-Z]{1,15}" required>
+                </div>
+            </div>
+            
+            <div class="row mb-3">
+                <label for="lastName" id="lastName-label" class="col-form-label col-md-3">Lastname :</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" id="lastName" pattern="[a-zA-Z]{1,25}" required>
+                </div>
+            </div>
+            
+            <div class="row mb-3">
+                <label for="username" id="username-label" class="col-form-label col-md-3">Username :</label>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="username" pattern="[a-zA-Z]{6,10}" required>
+                </div>
+                <label for="password" id="password-label" class="col-form-label col-md-3">Password :</label>
+                <div class="col-md-3">
+                    <input type="password" class="form-control" id="password" pattern="(?=.*\d{2,})(?=.*[a-z]{2,})(?=.*[A-Z])(?=.*[@#$%^&+=]).{6,8}" required>
+                </div>
+            </div>
+            
+            <div class="row mb-3">
+                <label for="dob" id="dob-label" class="col-form-label col-md-3">Date of Birth :</label>
+                <div class="col-md-3">
+                    <input type="date" class="form-control" id="dob" pattern="(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])-\d{4}" required>
+                </div>
+                <label for="gender" id="gender-label" class="col-form-label col-md-3">Gender :</label>
+                <div class="col-md-3">
+                    <select class="form-control" id="gender" required>
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Error alert box -->
+            <div id="error-alert" class="alert alert-danger" role="alert" style="display:none;">
+                <ul id="error-list"></ul>
+            </div>
+
+            <!-- Success alert box -->
+            <div id="success-alert" class="alert alert-success" role="alert" style="display:none;">
+                Form submitted successfully!
+            </div>
+        </div>
+
+        <div class="box2">
+            <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/phone.png" alt="phone"/>
+            <h3 class="co">Contact</h3>
+            <hr>
+            <div class="row mb-3">
+                <label for="phoneNumber" id="phoneNumber-label" class="col-form-label col-md-3">Phone number :</label>
+                <div class="col-md-3">
+                    <input type="tel" class="form-control input-blur" id="phoneNumber" pattern="\(\d{3}\)\d{3}-\d{4}" required>
+                </div>
+                <label for="email" id="email-label" class="col-form-label col-md-3">Email address :</label>
+                <div class="col-md-3">
+                    <input type="email" class="form-control input-blur" id="email" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="box4">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="script.js" async defer></script>
+<script>
+// script.js
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Function to validate the form
+    function validateForm() {
+        // Reset label colors
+        resetLabelColor('studentId-label');
+        resetLabelColor('firstName-label');
+        resetLabelColor('lastName-label');
+        resetLabelColor('username-label');
+        resetLabelColor('password-label');
+        resetLabelColor('gender-label');
+        resetLabelColor('phoneNumber-label');
+        resetLabelColor('email-label');
+        resetLabelColor('dob-label');
+
+        // Reset error alert
+        document.getElementById('error-alert').style.display = 'none';
+
+        // Validation logic for each field
+        const studentIdRegex = /^[a-zA-Z]{3}\.[0-9]{3}\.[0-9]{1,4}$/;
+        const firstNameRegex = /^[a-zA-Z]{1,15}$/;
+        const lastNameRegex = /^[a-zA-Z]{1,25}$/;
+        const usernameRegex = /^[a-zA-Z]{6,10}$/;
+        const passwordRegex = /^(?=.*\d{2,})(?=.*[a-z]{2,})(?=.*[A-Z])(?=.*[@#$%^&+=]).{6,8}$/;
+        const genderRegex = /^(male|female)$/;
+        const phoneNumberRegex = /^\(\d{3}\)\d{3}-\d{4}$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const dobRegex = /^(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])-\d{4}$/;
+
+        const studentId = document.getElementById('studentId').value;
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const gender = document.getElementById('gender').value;
+        const phoneNumber = document.getElementById('phoneNumber').value;
+        const email = document.getElementById('email').value;
+        const dob = document.getElementById('dob').value;
+
+        // Check each field against its respective regex
+        if (!studentIdRegex.test(studentId)) {
+            changeLabelColor('studentId-label');
+            showErrors(['Invalid Student ID format']);
+            return false;
+        }
+
+        if (!firstNameRegex.test(firstName)) {
+            changeLabelColor('firstName-label');
+            showErrors(['Invalid Firstname format']);
+            return false;
+        }
+
+        if (!lastNameRegex.test(lastName)) {
+            changeLabelColor('lastName-label');
+            showErrors(['Invalid Lastname format']);
+            return false;
+        }
+
+        if (!usernameRegex.test(username)) {
+            changeLabelColor('username-label');
+            showErrors(['Invalid Username format']);
+            return false;
+        }
+
+        if (!passwordRegex.test(password)) {
+            changeLabelColor('password-label');
+            showErrors(['Invalid Password format']);
+            return false;
+        }
+
+        if (!genderRegex.test(gender)) {
+            changeLabelColor('gender-label');
+            showErrors(['Invalid Gender']);
+            return false;
+        }
+
+        if (!phoneNumberRegex.test(phoneNumber)) {
+            changeLabelColor('phoneNumber-label');
+            showErrors(['Invalid Phone Number format']);
+            return false;
+        }
+
+        if (!emailRegex.test(email)) {
+            changeLabelColor('email-label');
+            showErrors(['Invalid Email Address format']);
+            return false;
+        }
+
+        if (!dobRegex.test(dob)) {
+            changeLabelColor('dob-label');
+            showErrors(['Invalid Date of Birth format']);
+            return false;
+        }
+
+        // Additional validation for programming languages checkboxes
+        const languages = document.querySelectorAll('input[name="programmingLanguages"]:checked');
+        if (languages.length === 0) {
+            showErrors(['Please select at least one programming language']);
+            return false;
+        }
+
+        // If all validations pass, show success alert
+        showSuccess();
+        return true;
+    }
+
+    // Function to change label color to red
+    function changeLabelColor(labelId) {
+        document.getElementById(labelId).style.color = 'red';
+    }
+
+    // Function to reset label color to black
+    function resetLabelColor(labelId) {
+        document.getElementById(labelId).style.color = 'black';
+    }
+
+    // Function to show errors in an alert box
+    function showErrors(errors) {
+        const errorAlert = document.getElementById('error-alert');
+        const errorList = document.getElementById('error-list');
+
+        // Clear previous errors
+        errorList.innerHTML = '';
+
+        // Populate error list
+        errors.forEach(error => {
+            const listItem = document.createElement('li');
+            listItem.textContent = error;
+            errorList.appendChild(listItem);
+        });
+
+        // Show error alert box
+        errorAlert.style.display = 'block';
+    }
+
+    // Function to show success in an alert box
+    function showSuccess() {
+        const successAlert = document.getElementById('success-alert');
+
+        // Show success alert box
+        successAlert.style.display = 'block';
+    }
+
+    // Add event listener for form submission
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent default form submission
+        validateForm(); // Call the validation function
+    });
+});
+
+
+</script>
+
+</body>
+</html>
+
